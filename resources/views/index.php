@@ -1,0 +1,13 @@
+<?php
+include("html-header.php");
+include("nav.php");
+include("header.php");
+include("services.php");
+#include("portfolio.php");
+include("client.php");
+include("logos.php");
+include("team.php");
+include("contact.php");
+include("footer.php");
+include("html-footer.php");
+?>
