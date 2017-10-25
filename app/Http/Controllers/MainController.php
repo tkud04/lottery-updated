@@ -32,6 +32,11 @@ class MainController extends Controller {
     	return view('index');
     }
     
+    public function getApply()
+    {
+    	return view('apply');
+    }
+    
     
         /**
 	 * Handles admission application

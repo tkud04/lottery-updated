@@ -12,4 +12,5 @@
 */
 
 Route::get('/', 'MainController@index');
+Route::get('apply', 'MainController@getApply');
 Route::post('apply', 'MainController@postApply');
