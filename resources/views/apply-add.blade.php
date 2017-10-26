@@ -3,6 +3,7 @@
     	<h2>We exist to change lives</h2>
     	<h6>Apply today to stand a chance of winning $1 million!</h6>
         	    <form method="post" action="{{url('apply')}}">   
+        	           {{ csrf_field() }}
                        <div class="alert alert-info">Personal Details</div>       	
                 	   <h4>Enter your email address <span style="color:red;">*</span></h4>
                 	   <input type="text" class="form-control" name="email" required>   
