@@ -6,9 +6,8 @@ use Crypt;
 use Carbon\Carbon; 
 use Mail;
 use Auth; 
-use App\News;
-use App\Comments;
-use App\Uploads;
+use App\Clients;
+use App\ClientData;
 
 class Helper implements HelperContract
 {
@@ -43,65 +42,48 @@ class Helper implements HelperContract
            }
            
            
-           
-           function getUploads(){
-              $ret = [];
-              $uploads = Uploads::all();
-              #dd($uploads);
-              
-              
-            foreach($uploads as $u){
-            $handle = null; $fn = null; $temp = array("id" => $u->id, "email" => $u->email,"full_name" => $u->full_name);
-            
-            $arr = [ "o_level" => $u->o_level,
-                                        "birth_cert" => $u->birth_cert,
-                                        "lg_id" => $u->lg_id,
-                                        "testimonial" => $u->testimonial,
-                                        "passport" => $u->passport,
-                                        "med_cert" => $u->med_cert];	
-                                        
-            foreach($arr as $key => $value){
-             $final = "Not Found";
-            if(file_exists(public_path("documents/").$value)) 
-             {
-                if ($handle = opendir(public_path("documents/").$value)) {
-                  /* This is the correct way to loop over the directory. */
-                while (false !== ($entry = readdir($handle))) {    $fn = $entry;          }
-                }
-               closedir($handle);
-               $final = "documents/".$value."/".$fn;
-             } 
-            $temp[$key] = $final;
-           } 
-           array_push($ret, $temp);
-          } 
-           
-          # dd($ret);
-           return $ret;
-           }           
-        
-        
-           function getComments($p){
-              $ret = [];
-              $comments = Comments::where('post_id', $p)->get();
-              #dd($comments);
-              
-              
-            foreach($comments as $c){
-            $temp = array();
-            $temp["name"] = $c->name;
-            $temp["email"] = $c->email;
-            $temp["comment"] = $c->comment;
-            $temp["date"] = Carbon::parse($c->created_at)->format("jS F Y, h:i A");
-            array_push($ret, $temp);
+           function createClient($data)
+           {
+           	$ret = Clients::create(['fname' => $data['fname'], 
+                                                      'lname' => $data['lname'],                                                      
+                                                      'phone' => $data['phone'], 
+                                                      'email' => $data['email'], 
+                                                      'agent' => $data['agent'], 
+                                                      'gender' => $data['gender']
+                                                      ]);
+                                                      
+                return $ret;
            } 
            
+           function createClientData($data)
+          {
+          	$rd = ClientData::create(['client_id' => $data['client_id'], 
+                                                      'salary' => "", 
+                                                      'means_id' => "", 
+                                                      'birth_year' => $data['birth-year'], 
+                                                      'birth_month' => $data['birth-month'], 
+                                                      'birth_day' => $data['birth-day'], 
+                                                      'city_birth' => $data['city-birth'], 
+                                                      'birth_country' => $data['birth-country'], 
+                                                      'native_country' => $data['native-country'], 
+                                                      'address' => $data['address'], 
+                                                      'city' => $data['city'], 
+                                                      'region' => $data['region'], 
+                                                      'postal_code' => $data['postal-code'], 
+                                                      'contact_country' => $data['contact-country'], 
+                                                      'marital_status' => $data['marital-status'], 
+                                                      'kids' => $data['kids'], 
+                                                    ]);
+              return $rd;
+          }
           
-           
-          # dd($ret);
-           return $ret;
-           }           
-                
+          function getReferenceNumber()
+          {
+          	$length = 12;
+          	$ret = openssl_random_pseudo_bytes($length, $cstrong);
+              $ret = bin2hex($ret);
+              return $ret;
+          }
    
 }
 ?>

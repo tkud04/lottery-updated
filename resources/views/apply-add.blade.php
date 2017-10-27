@@ -1,14 +1,24 @@
 <section class="main-section" id="service"><!--main-section-start-->
 	<div class="container">
+		@if(Session::has('apply-stage-2-status') && Session::get('apply-stage-2-status') == "success") 
+		  <div class="alert alert-success">Application Successful! We've just sent you an email. We hope you win the lottery!</div>
+		@endif
     	<h2>We exist to change lives</h2>
-    	<h6>Apply today to stand a chance of winning $1 million!</h6>
+    	<h6>Apply today to stand a chance of winning $1 million!</h6>        
         	    <form method="post" action="{{url('apply')}}">   
-        	           {{ csrf_field() }}
-                       <div class="alert alert-info">Personal Details</div>       	
+        	           {{ csrf_field() }}                    
+                       <input type="hidden" name="grepo" value="1" required>   
+                       <div class="alert alert-info">Personal Details</div>    
+                        <div class="row">   
+                        <div class="col-lg-6 col-sm-6">   	
                 	   <h4>Enter your email address <span style="color:red;">*</span></h4>
                 	   <input type="text" class="form-control" name="email" required>   
-                       <div class="row">   
+                	   </div>
                         <div class="col-lg-6 col-sm-6">
+                        	<h4><strong>Your agent's email address <span style="color:red;">*</span></strong></h4>
+                	   <input type="text" class="form-control" name="agent" required>   
+                	   </div>
+                      </div>
                 	   <h4>Enter your first name <span style="color:red;">*</span></h4>
                 	   <input type="text" class="form-control" name="fname" required>
                 	   </div>
