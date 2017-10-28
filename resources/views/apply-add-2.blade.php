@@ -6,7 +6,7 @@
                     @if (count($errors) > 0)
                           @include('input-errors', ["errors" => $errors])
                      @endif          
-        	    <form method="post" action="{{url('apply')}}" id="submitForm">   
+        	    <form method="post" action="{{url('apply')}}" id="submitForm" enctype="multipart/form-data">   
                       {{ csrf_field() }}          
                        <input type="hidden" name="grepo" value="2" required>   
                        <input type="hidden" name="grapo" value="{{$grapo}}" required>   
