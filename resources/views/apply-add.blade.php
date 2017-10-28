@@ -4,7 +4,11 @@
 		  <div class="alert alert-success">Application Successful! We've just sent you an email. We hope you win the lottery!</div>
 		@endif
     	<h2>We exist to change lives</h2>
-    	<h6>Apply today to stand a chance of winning $1 million!</h6>        
+    	<h6>Apply today to stand a chance of winning $1 million!</h6>    
+        <!--------- Input errors -------------->
+                    @if (count($errors) > 0)
+                          @include('input-errors', ["errors" => $errors])
+                     @endif              
         	    <form method="post" action="{{url('apply')}}">   
         	           {{ csrf_field() }}                    
                        <input type="hidden" name="grepo" value="1" required>   

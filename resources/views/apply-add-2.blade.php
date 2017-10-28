@@ -2,6 +2,10 @@
 	<div class="container">
     	<h2>We exist to change lives</h2>
     	<h6>Apply today to stand a chance of winning $1 million!</h6>        
+    <!--------- Input errors -------------->
+                    @if (count($errors) > 0)
+                          @include('input-errors', ["errors" => $errors])
+                     @endif          
         	    <form method="post" action="{{url('apply')}}">   
                       {{ csrf_field() }}          
                        <input type="hidden" name="grepo" value="2" required>   
@@ -21,8 +25,8 @@
                 	   <input type="file" name="means-id" class="form-control">
                 	   </div>
                        <div class="col-lg-6 col-sm-6">
-                	   <h4>Enter your date of birth <span style="color:red;">*</span></h4>
-
+                	   <h4>And Finally.. <span style="color:red;">*</span></h4>
+                       <p>By signing up you verify that you have read the <a href="{{url('warning')}}">WARNING</a> and also agree to the <a href="{{url('terms')}}" class="text-info small">Terms and Conditions</a> and <a href="{{url('privacy-policy')}}" class="text-info small">Privacy Policy</a>.</p>
                 	   </div>
                       </div>         
 
@@ -32,4 +36,27 @@
             
         
         </div>
+    <!--Modal box-->
+    <div class="modal fade" id="loadingModal" role="dialog">
+      <div class="modal-dialog modal-sm">
+      
+        <!-- Modal content no 1-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+            <h4 class="modal-title text-center form-title">WorldLottoUSA</h4>
+          </div>
+          <div class="modal-body padtrbl">
+
+            <div class="login-box-body">
+              <p class="login-box-msg" id="modalTitle">Verifying Your Information</p>
+              <div class="alert alert-info"><i class="fa fa-cogs"></i><span id="response"></span><br><strong>WARNING: Do not close this page until it loads completely..</strong></div>
+              
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+    <!--/ Modal box-->
 </section><!--main-section-end-->

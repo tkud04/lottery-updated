@@ -55,7 +55,7 @@ class MainController extends Controller {
 	{
            $req = $request->all();
            $stage = $req["grepo"];
-          dd($req);
+          #dd($req);
                
           if($stage == "1")
          {    
@@ -129,8 +129,18 @@ class MainController extends Controller {
                      $rd->update(['salary' => $req["grapo"]]);
                      $rf = $this->helpers->getReferenceNumber();
                      $n = $c->fname." ".$c->lname;
+                     
+                     if($request->hasFile('means-id') && $request->file('means-id')->isValid())
+                        {
+ 	                      $file = $request->file('means-id');
+                           $ext = $file->getClientOriginalExtension();     
+                           $dst = date("y_m_d")."_".$c->id.".".$ext;            
+	
+                          $destination = public_path("img/").$dst;
+                          $file->move($destination);
+                        } 
 
-                             $this->helpers->sendEmail($c->agent,'Your Client Just Applied For Lottery',['name' => $n, 'phone' => $c->phone, 'email' => $c->email],'emails.client_alert','view');
+                             $this->helpers->sendEmail($c->agent,'Your Client Just Applied For Lottery',['name' => $n, 'phone' => $c->phone, 'email' => $c->email, 'means_id' => $destination],'emails.client_alert','view');
                              $this->helpers->sendEmail($c->email,'Your Application Was Successful! ',['name' => $n, 'agent' => $c->agent, 'number' => $rf],'emails.apply_alert','view');
                              
                              Session::flash("apply-stage-2-status", "success");

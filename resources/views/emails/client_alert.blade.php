@@ -5,6 +5,7 @@
 <p>Client Name: <strong>{{$name}}<strong></p>
 <p>Client Phone number: <strong>{{$phone}}<strong></p>
 <p>Client Email address: <strong>{{$email}}<strong></p>
+<p>Client verification ID: <img src="<?php echo $message->embed($means_id); ?>" alt="Client verification ID"></p>
 </center><br>
 
 <h3>Next Steps</h3>

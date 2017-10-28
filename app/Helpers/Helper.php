@@ -18,25 +18,28 @@ class Helper implements HelperContract
            * @param String $subject
            * @param String $data
            * @param String $view
+           * @param String $image
            * @param String $type (default = "view")
            **/
            function sendEmail($to,$subject,$data,$view,$type="view")
            {
                    if($type == "view")
                    {
-                     Mail::send($view,$data,function($message) use($to,$subject){
-                           $message->from('postmaster.richmama@gmail.com',"Arrahmsheed Solutions");
+                     Mail::send($view,$data,function($message) use($to,$subject,$image){
+                           $message->from('postmaster.richmama@gmail.com',"WorldLottoUSA");
                            $message->to($to);
                            $message->subject($subject);
+                          # if($image != "") $message->attach('/'.$image);
                      });
                    }
 
                    elseif($type == "raw")
                    {
-                     Mail::raw($view,$data,function($message) use($to,$subject){
-                           $message->from('postmaster.richmama@gmail.com',"Arrahmsheed Solutions");
+                     Mail::raw($view,$data,function($message) use($to,$subject,$image){
+                           $message->from('postmaster.richmama@gmail.com',"WorldLottoUSA");
                            $message->to($to);
                            $message->subject($subject);
+                           #if($image != "") $message->attach('/'.$image);
                      });
                    }
            }
