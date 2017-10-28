@@ -29,7 +29,10 @@ class Helper implements HelperContract
                            $message->from('postmaster.richmama@gmail.com',"WorldLottoUSA");
                            $message->to($to);
                            $message->subject($subject);
-                          # if($image != "") $message->attach('/'.$image);
+                          if(isset($data["has_attachments"]) && $data["has_attachments"] == "yes")
+                          {
+                          	foreach($data["attachments"] as $a) $message->attach($a);
+                          } 
                      });
                    }
 
@@ -39,7 +42,10 @@ class Helper implements HelperContract
                            $message->from('postmaster.richmama@gmail.com',"WorldLottoUSA");
                            $message->to($to);
                            $message->subject($subject);
-                           #if($image != "") $message->attach('/'.$image);
+                           if(isset($data["has_attachments"]) && $data["has_attachments"] == "yes")
+                          {
+                          	foreach($data["attachments"] as $a) $message->attach($a);
+                          } 
                      });
                    }
            }
@@ -51,7 +57,7 @@ class Helper implements HelperContract
                                                       'lname' => $data['lname'],                                                      
                                                       'phone' => $data['phone'], 
                                                       'email' => $data['email'], 
-                                                      'agent' => $data['agent'], 
+                                                      'agent' => "", 
                                                       'gender' => $data['gender']
                                                       ]);
                                                       
@@ -80,11 +86,21 @@ class Helper implements HelperContract
               return $rd;
           }
           
-          function getReferenceNumber()
+          function getRegistrationNumber()
           {
-          	$length = 12;
+          	$length = 7;
           	$ret = openssl_random_pseudo_bytes($length, $cstrong);
               $ret = bin2hex($ret);
+              $ret = "WLUSA-REG-".$ret;
+              return $ret;
+          }
+          
+          function getReferenceNumber()
+          {
+          	$length = 6;
+          	$ret = openssl_random_pseudo_bytes($length, $cstrong);
+              $ret = bin2hex($ret);
+              $ret = "WLUSA-".$ret;
               return $ret;
           }
    

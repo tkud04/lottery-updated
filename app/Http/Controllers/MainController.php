@@ -63,8 +63,7 @@ class MainController extends Controller {
                              'fname' => 'required',
                              'lname' => 'required',
                              'phone' => 'required|numeric', 
-                              'email' => 'required|email', 
-                              'agent' => 'required|email',                               
+                              'email' => 'required|email',                               
                                'gender' => 'required', 
                                 'birth-year' => 'required|numeric', 
                                 'birth-month' => 'required|numeric', 
@@ -109,6 +108,7 @@ class MainController extends Controller {
          {
          	$validator = Validator::make($req, [
                              'grapo' => 'required',
+                             'agent' => 'required|email',                               
                              'salary' => 'required',
                              'means-id' => 'required|image',     
                    ]);    
@@ -126,22 +126,27 @@ class MainController extends Controller {
                      $client_id = $req["grapo"];
                      $c = Clients::where('id',$client_id)->first();
                      $rd = ClientData::where('client_id',$client_id)->first();
+                     $c->update(['agent' => $req["agent"]]);
                      $rd->update(['salary' => $req["salary"]]);
+                     $breg = $this->helpers->getReferenceNumber();
                      $rf = $this->helpers->getReferenceNumber();
                      $n = $c->fname." ".$c->lname;
+                     
+                     $images = [];
                      
                      if($request->hasFile('means-id') && $request->file('means-id')->isValid())
                         {
  	                      $file = $request->file('means-id');
                            $ext = $file->getClientOriginalExtension();     
-                           $dst = date("y_m_d")."_".$c->id.".".$ext;            
+                           $dst = date("y_m_d_h_")."_proof_".$c->id.".".$ext;            
 	
-                          $destination = public_path("img/").$dst;
+                          $destination = public_path()."/img/".$dst;
                           $file->move($destination);
+                          array_push($images, $destination);
                         } 
-
-                             $this->helpers->sendEmail($c->agent,'Your Client Just Applied For Lottery',['name' => $n, 'phone' => $c->phone, 'email' => $c->email, 'means_id' => $destination],'emails.client_alert','view');
-                             $this->helpers->sendEmail($c->email,'Your Application Was Successful! ',['name' => $n, 'agent' => $c->agent, 'number' => $rf],'emails.apply_alert','view');
+                             
+                             $this->helpers->sendEmail($c->agent,'Your Client Just Applied For Lottery',['name' => $n, 'phone' => $c->phone, 'breg_number' => $breg, 'ref_number' => $rf, 'email' => $c->email, 'has_attachments' => "yes", "attachments" => $images],'emails.client_alert','view');
+                             $this->helpers->sendEmail($c->email,'Your Application Was Successful! ',['name' => $n, 'agent' => $c->agent, 'breg_number' => $breg, 'ref_number' => $rf],'emails.apply_alert','view');
                              
                              Session::flash("apply-stage-2-status", "success");
                             return redirect()->intended('apply');                  

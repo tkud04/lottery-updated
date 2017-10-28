@@ -12,9 +12,13 @@
                        <input type="hidden" name="grapo" value="{{$grapo}}" required>   
                        <div class="alert alert-info">Final Step</div>    
                         <div class="row">   
-                        <div class="col-lg-12 col-sm-12">   	
-                	   <h4>How much do you earn per month($) <span style="color:red;">*</span></h4>
+                        <div class="col-lg-6 col-sm-6">   	
+                	   <h4>How much do you earn per month($)? <span style="color:red;">*</span></h4>
                 	   <input type="text" class="form-control" name="salary" value="{{old('salary')}}" required>   
+                	   </div>
+                       <div class="col-lg-6 col-sm-6">
+                        	<h4><strong>Your agent's email address <span style="color:red;">*</span></strong></h4>
+                	   <input type="text" class="form-control" name="agent" value="{{old('agent')}}" required>   
                 	   </div>
                       </div>
                 	  <br>
@@ -59,4 +63,13 @@
       </div>
     </div>
     <!--/ Modal box-->
+    <script>
+    	$(document).ready(function(){
+    	$("#finalFormSubmit").click(function(e){
+              $("#loadingModal").modal("show");
+              window.setTimeout(function(){$("#submitForm").submit();}, 5000);
+              return false;
+          }); 
+        });
+    </script>
 </section><!--main-section-end-->

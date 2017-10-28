@@ -2,8 +2,9 @@
 <p>Hello <strong>{{$name}}</strong>, we are pleased to inform you that your lotto application was successful! Please take note of your reference number:</p><br>
 
 <center>
-<p>Reference Number: <strong>{{$number}}<strong></p>
-<p> Agent Email address: <strong>{{$agent}}<strong></p>
+<p>Client Batch Registration Number: <strong>{{$breg_number}}</strong></p>
+<p>Client Reference Number: <strong>{{$ref_number}}</strong></p>
+<p> Agent Email address: <strong>{{$agent}}</strong></p>
 </center><br>
 
 <h3>Next Steps</h3>

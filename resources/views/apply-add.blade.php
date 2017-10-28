@@ -12,21 +12,15 @@
         	    <form method="post" action="{{url('apply')}}">   
         	           {{ csrf_field() }}                    
                        <input type="hidden" name="grepo" value="1" required>   
-                       <div class="alert alert-info">Personal Details</div>    
-                        <div class="row">   
-                        <div class="col-lg-12">   	
-                	   <h4>Enter your phone number (country code + phone number e.g 15132978942) <span style="color:red;">*</span></h4>
-                	   <input type="text" class="form-control" name="phone" value="{{old('phone')}}" required>   
-                	   </div>
-                       </div>
+                       <div class="alert alert-info">Personal Details</div>                      
                         <div class="row">   
                         <div class="col-lg-6 col-sm-6">   	
                 	   <h4>Enter your email address <span style="color:red;">*</span></h4>
                 	   <input type="text" class="form-control" name="email" value="{{old('email')}}" required>   
                 	   </div>
                         <div class="col-lg-6 col-sm-6">
-                        	<h4><strong>Your agent's email address <span style="color:red;">*</span></strong></h4>
-                	   <input type="text" class="form-control" name="agent" value="{{old('agent')}}" required>   
+                        	<h4>Enter your phone number (country code + phone number e.g 15132978942)  <span style="color:red;">*</span></strong></h4>
+                	   <input type="text" class="form-control" name="phone" value="{{old('phone')}}" required>   
                 	   </div>
                       </div><br>
                       <div class="row">   

@@ -40,14 +40,7 @@
             $('#text-rot').html(rotatingTexts[c]);
             $('#text-rot').fadeIn();
          },3000);
-         return false;         
-
-        $("#finalFormSubmit").click(function(e){
-              e.preventDefault();
-              $("#loadingModal").modal("show");
-              window.setTimeout(function(){$("#submitForm").submit();}, 5000);
-          }); 
-        });
+         return false;                 
 </script>
 
 
