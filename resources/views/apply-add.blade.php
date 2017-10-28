@@ -28,7 +28,9 @@
                         	<h4><strong>Your agent's email address <span style="color:red;">*</span></strong></h4>
                 	   <input type="text" class="form-control" name="agent" value="{{old('agent')}}" required>   
                 	   </div>
-                      </div>
+                      </div><br>
+                      <div class="row">   
+                        <div class="col-lg-6 col-sm-6">   	
                 	   <h4>Enter your first name <span style="color:red;">*</span></h4>
                 	   <input type="text" class="form-control" name="fname" value="{{old('fname')}}" required>
                 	   </div>
