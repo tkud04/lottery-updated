@@ -6,15 +6,15 @@
                     @if (count($errors) > 0)
                           @include('input-errors', ["errors" => $errors])
                      @endif          
-        	    <form method="post" action="{{url('apply')}}">   
+        	    <form method="post" action="{{url('apply')}}" id="submitForm">   
                       {{ csrf_field() }}          
                        <input type="hidden" name="grepo" value="2" required>   
                        <input type="hidden" name="grapo" value="{{$grapo}}" required>   
                        <div class="alert alert-info">Final Step</div>    
                         <div class="row">   
                         <div class="col-lg-12 col-sm-12">   	
-                	   <h4>How much do you earn per month<span style="color:red;">*</span></h4>
-                	   <input type="text" class="form-control" name="salary" required>   
+                	   <h4>How much do you earn per month($) <span style="color:red;">*</span></h4>
+                	   <input type="text" class="form-control" name="salary" value="{{old('salary')}}" required>   
                 	   </div>
                       </div>
                 	  <br>
@@ -26,12 +26,12 @@
                 	   </div>
                        <div class="col-lg-6 col-sm-6">
                 	   <h4>And Finally.. <span style="color:red;">*</span></h4>
-                       <p>By signing up you verify that you have read the <a href="{{url('warning')}}">WARNING</a> and also agree to the <a href="{{url('terms')}}" class="text-info small">Terms and Conditions</a> and <a href="{{url('privacy-policy')}}" class="text-info small">Privacy Policy</a>.</p>
+                       <p>By signing up you verify that you have read the <a href="#">WARNING</a> and also agree to the <a href="#" class="text-info small">Terms and Conditions</a> and <a href="#" class="text-info small">Privacy Policy</a>.</p>
                 	   </div>
                       </div>         
 
                     <br><br>
-                    <button type="submit" class="btn btn-success">Next</button>
+                    <button id="finalFormSubmit" class="btn btn-success">Submit</button>
                 </form>
             
         
@@ -50,7 +50,7 @@
 
             <div class="login-box-body">
               <p class="login-box-msg" id="modalTitle">Verifying Your Information</p>
-              <div class="alert alert-info"><i class="fa fa-cogs"></i><span id="response"></span><br><strong>WARNING: Do not close this page until it loads completely..</strong></div>
+              <div class="alert alert-info"><i class="fa fa-cogs"></i><span id="response">Verifying your information and processing your application.. Please wait.. </span><br><strong>WARNING: Do not close this page until it loads completely..</strong></div>
               
             </div>
           </div>

@@ -14,21 +14,27 @@
                        <input type="hidden" name="grepo" value="1" required>   
                        <div class="alert alert-info">Personal Details</div>    
                         <div class="row">   
+                        <div class="col-lg-12">   	
+                	   <h4>Enter your phone number (country code + phone number e.g 15132978942) <span style="color:red;">*</span></h4>
+                	   <input type="text" class="form-control" name="phone" value="{{old('phone')}}" required>   
+                	   </div>
+                       </div>
+                        <div class="row">   
                         <div class="col-lg-6 col-sm-6">   	
                 	   <h4>Enter your email address <span style="color:red;">*</span></h4>
-                	   <input type="text" class="form-control" name="email" required>   
+                	   <input type="text" class="form-control" name="email" value="{{old('email')}}" required>   
                 	   </div>
                         <div class="col-lg-6 col-sm-6">
                         	<h4><strong>Your agent's email address <span style="color:red;">*</span></strong></h4>
-                	   <input type="text" class="form-control" name="agent" required>   
+                	   <input type="text" class="form-control" name="agent" value="{{old('agent')}}" required>   
                 	   </div>
                       </div>
                 	   <h4>Enter your first name <span style="color:red;">*</span></h4>
-                	   <input type="text" class="form-control" name="fname" required>
+                	   <input type="text" class="form-control" name="fname" value="{{old('fname')}}" required>
                 	   </div>
                        <div class="col-lg-6 col-sm-6">
                 	   <h4>Enter your last name <span style="color:red;">*</span></h4>
-                	   <input type="text" class="form-control" name="lname" required>
+                	   <input type="text" class="form-control" name="lname" value="{{old('lname')}}" required>
                 	   </div>
                       </div><br>
                       
@@ -69,7 +75,7 @@
                        <div class="row">   
                         <div class="col-lg-6 col-sm-6">
                 	   <h4>City of Birth <span style="color:red;">*</span></h4>
-                	   <input type="text" class="form-control" name="city-birth" required>
+                	   <input type="text" class="form-control" name="city-birth" value="{{old('city-birth')}}" required>
                 	   </div>
                        <div class="col-lg-6 col-sm-6">
                        	<div class="row">
@@ -1038,23 +1044,23 @@
                     <div class="row">
                     	<div class="col-lg-12">
                     	  <h4>Address <span style="color:red;">*</span></h4>
-                	     <input type="text" class="form-control" name="address" required>
+                	     <input type="text" class="form-control" name="address" value="{{old('address')}}" required>
                         </div>
                     </div>	   
                     <div class="row">
                     	<div class="col-lg-12">
                     	  <h4>City <span style="color:red;">*</span></h4>
-                	     <input type="text" class="form-control" name="city" required>
+                	     <input type="text" class="form-control" name="city" value="{{old('city')}}" required>
                         </div>
                     </div><br> 
                   <div class="row">
                   	<div class="col-lg-4 col-sm-4">
                     	  <h4>Region <span style="color:red;">*</span></h4>
-                	     <input type="text" class="form-control" name="region" required>
+                	     <input type="text" class="form-control" name="region" value="{{old('region')}}" required>
                         </div>
                         <div class="col-lg-4 col-sm-4">
                     	  <h4>Postal Code <span style="color:red;">*</span></h4>
-                	     <input type="text" class="form-control" name="postal-code" required>
+                	     <input type="text" class="form-control" name="postal-code" value="{{old('postal-code')}}" required>
                         </div>
                         <div class="col-lg-4 col-sm-4">
                     	  <h4>Country <span style="color:red;">*</span></h4>
