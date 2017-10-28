@@ -39,7 +39,7 @@ class MainController extends Controller {
         
         if(isset($req["grepo"])){
             $com = "2";
-          $grapo = $req["grepo"]);
+          $grapo = $req["grepo"];
         } 
         
     	return view('apply', compact(['com','grapo']));
