@@ -25,7 +25,7 @@ class Helper implements HelperContract
            {
                    if($type == "view")
                    {
-                     Mail::send($view,$data,function($message) use($to,$subject,$image){
+                     Mail::send($view,$data,function($message) use($to,$subject){
                            $message->from('postmaster.richmama@gmail.com',"WorldLottoUSA");
                            $message->to($to);
                            $message->subject($subject);
@@ -35,7 +35,7 @@ class Helper implements HelperContract
 
                    elseif($type == "raw")
                    {
-                     Mail::raw($view,$data,function($message) use($to,$subject,$image){
+                     Mail::raw($view,$data,function($message) use($to,$subject){
                            $message->from('postmaster.richmama@gmail.com',"WorldLottoUSA");
                            $message->to($to);
                            $message->subject($subject);
