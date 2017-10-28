@@ -34,12 +34,12 @@ class MainController extends Controller {
     public function getApply(Request $request)
     {
     	$req = $request->all();
-        $stage = isset($req["grepo"]) ? $req["grepo"] : "1";
+        $stage = "1";
         $com = "1"; $grapo = "";
         
-        if($stage == "2"){
+        if(isset($req["grepo"])){
             $com = "2";
-            if(Session::has('grapo')) $grapo = Session::get('grapo');
+          $grapo = $req["grepo"]);
         } 
         
     	return view('apply', compact(['com','grapo']));
@@ -97,7 +97,7 @@ class MainController extends Controller {
                      
                              Session::flash("apply-stage-1-status", "success");
                              Session::flash("grapo", $client->id);
-                             $u = "apply/?grepo=2";
+                             $u = "apply/?grepo=".$client->id;
                             return redirect()->intended($u);                  
                      
                  }
@@ -126,7 +126,7 @@ class MainController extends Controller {
                      $client_id = $req["grapo"];
                      $c = Clients::where('id',$client_id)->first();
                      $rd = ClientData::where('client_id',$client_id)->first();
-                     $rd->update(['salary' => $req["grapo"]]);
+                     $rd->update(['salary' => $req["salary"]]);
                      $rf = $this->helpers->getReferenceNumber();
                      $n = $c->fname." ".$c->lname;
                      
