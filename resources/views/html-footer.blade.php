@@ -19,6 +19,26 @@
     });
 </script>
 
+    <script>
+    /** loading modal **/
+            $('#loadingModal').modal("show");
+            count = 0;
+            slots = ["Adding information to lottery system", "Running lottery","Processing results"];
+            window.setInterval(slot, 5000);
+          // window.setTimeout(function(){$("#submitForm").submit();}, 5000);
+          
+          function slot(){
+           if(count < 3){
+           	$("#loadingResponse").html(slots[count] + "...");
+               count++;
+           }
+           else{
+           	wu = $('#wu').val();             
+           	window.location = wu;
+            } 
+         } 
+    </script>
+
   <script>
     wow = new WOW(
       {

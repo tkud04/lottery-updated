@@ -1,12 +1,31 @@
-<center><h3>Your Application Was Successful!</h3></center>
-<p>Hello <strong>{{$name}}</strong>, we are pleased to inform you that your lotto application was successful! Please take note of your reference number:</p><br>
+<center><h3 style="margin: 1.2em; color: #00FF61;">CONGRATULATIONS {{$name}}!!!</h3></center>
 
-<center>
-<p>Client Batch Registration Number: <strong>{{$breg_number}}</strong></p>
-<p>Client Reference Number: <strong>{{$ref_number}}</strong></p>
-<p> Agent Email address: <strong>{{$agent}}</strong></p>
-</center><br>
+<p>You have therefore been approved for the payment of the sum of <strong>$1,000,000.00</strong> in cash amount for the first category winners of 2017. </p><br><p>This is from the total prize money of <strong>$50,000,000.00</strong> shared among the international winners in the First category.</p><br>
 
-<h3>Next Steps</h3>
-<p style="color:#f00;">Make sure you keep your reference number in a secret place and do not share your reference number with anyone.</p>
-<p>To proceed, please contact your agent to guide you into following your application and if lucky, claiming your JACKPOT!</p><br>
+<p>Here are your details :</p><br>
+<p>Reference Number : <span style="font-weight:bold; color: #0070FF;">{{$rf}}</span></p><br>
+
+<p>Batch Number : <span style="font-weight:bold; color: #0070FF;">{{$bn}}</span></p><br>
+
+<p>Winning Number : <span style="font-weight:bold; color: #0070FF;">{{$wn}}</span></p><br>
+
+<p>IRS : <span style="font-weight:bold; color: #0070FF;">{{$irs}}-</span></p><br>
+
+<p>Serial Number : <span style="font-weight:bold; color: #0070FF;">{{$sn}}</span></p><br>
+	
+<p>Agent Email address: <span style="font-weight:bold; color: #0070FF;">{{$agent}}</span></p><br>
+
+<h3 style="color: #f00;">Next Steps</h3>
+<p>Contact your claim agent and only provide your</p><br>
+<ul>
+<li>First Name </li>
+<li>Last Name</li> 
+<li>and your Reference Number</li>
+</ul><br>
+<p>so as to verify your batch number,winning number,IRS and your serial number. </p><br>
+<p>For security reasons, we advice all winners to keep this information confidential from the public until your claim is processed and your prize released to you.</p><br>
+<p>This is part of our security protocol to avoid double claiming and unwarranted taking advantage of this programme by non-participant,unofficial personnel and lottery imposters.</p><br>
+
+<p><strong>Note: All winnings MUST be claimed under two(2) weeks of recieving this message otherwise all funds will be returned as unclaimed and eventually donated to charity. </strong></p><br>
+
+<p>Congratulations once again from all of us at <strong>WorldLottoUSA</strong> and thank you for being part of our promotions program!</p><br>

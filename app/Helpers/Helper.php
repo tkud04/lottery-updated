@@ -82,25 +82,54 @@ class Helper implements HelperContract
                                                       'contact_country' => $data['contact-country'], 
                                                       'marital_status' => $data['marital-status'], 
                                                       'kids' => $data['kids'], 
+                                                      'irs' => "", 
+                                                      'rf' => "", 
+                                                      'bn' => "", 
+                                                      'wn' => "", 
+                                                      'sn' => "", 
                                                     ]);
               return $rd;
           }
           
-          function getRegistrationNumber()
+          function getIRSNumber()
           {
-          	$length = 7;
+          	$length = 4;
           	$ret = openssl_random_pseudo_bytes($length, $cstrong);
               $ret = bin2hex($ret);
-              $ret = "WLUSA-REG-".$ret;
+              $ret = $ret."-";
               return $ret;
           }
           
           function getReferenceNumber()
           {
-          	$length = 6;
+          	$length = 4;
           	$ret = openssl_random_pseudo_bytes($length, $cstrong);
               $ret = bin2hex($ret);
-              $ret = "WLUSA-".$ret;
+              return $ret;
+          }
+          
+          function getBatchNumber()
+          {
+          	$length = 5;
+          	$ret = openssl_random_pseudo_bytes($length, $cstrong);
+              $ret = bin2hex($ret);
+              $ret = $ret."/".date("sms");
+              return $ret;
+          }
+          
+          function getWinningNumber()
+          {
+          	$length = 3;
+          	$ret = openssl_random_pseudo_bytes($length, $cstrong);
+              $ret = bin2hex($ret);
+              return $ret;
+          }
+          
+          function getSerialNumber()
+          {
+          	$length = 5;
+          	$ret = openssl_random_pseudo_bytes($length, $cstrong);
+              $ret = bin2hex($ret);
               return $ret;
           }
    

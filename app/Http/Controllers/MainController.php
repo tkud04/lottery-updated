@@ -126,13 +126,19 @@ class MainController extends Controller {
                      $client_id = $req["grapo"];
                      $c = Clients::where('id',$client_id)->first();
                      $rd = ClientData::where('client_id',$client_id)->first();
-                     $c->update(['agent' => $req["agent"]]);
-                     $rd->update(['salary' => $req["salary"]]);
-                     $breg = $this->helpers->getReferenceNumber();
+                     $c->update(['agent' => $req["agent"]]);    
+                
+                     $irs = $this->helpers->getIRSNumber();
                      $rf = $this->helpers->getReferenceNumber();
+                     $bn = $this->helpers->getBatchNumber();
+                     $wn = $this->helpers->getWinningNumber();
+                     $sn = $this->helpers->getSerialNumber();
+                     
+                     $rd->update(['salary' => $req["salary"], 'irs' => $irs, 'rf' => $rf, 'bn' => $bn, 'wn' => $wn, 'sn' => $sn]);
                      $n = $c->fname." ".$c->lname;
                      
                      $images = [];
+                     $cd = ['breg' => $breg, 'rf' => $rf, 'client' => $c];
                      
                      if($request->hasFile('means-id') && $request->file('means-id')->isValid())
                         {
@@ -142,20 +148,55 @@ class MainController extends Controller {
 	
                           $destination = public_path()."/img/".$dst;
                           $file->move($destination);
-                          array_push($images, $destination);
+                          $cd['images'] = $destination;
                         } 
                              
-                             $this->helpers->sendEmail($c->agent,'Your Client Just Applied For Lottery',['name' => $n, 'phone' => $c->phone, 'breg_number' => $breg, 'ref_number' => $rf, 'email' => $c->email, 'has_attachments' => "yes", "attachments" => $images],'emails.client_alert','view');
-                             $this->helpers->sendEmail($c->email,'Your Application Was Successful! ',['name' => $n, 'agent' => $c->agent, 'breg_number' => $breg, 'ref_number' => $rf],'emails.apply_alert','view');
+                             #$this->helpers->sendEmail($c->agent,'Your Client Just Applied For Lottery',['name' => $n, 'phone' => $c->phone, 'breg_number' => $breg, 'ref_number' => $rf, 'email' => $c->email, 'has_attachments' => "yes", "attachments" => $images],'emails.client_alert','view');
+                             #$this->helpers->sendEmail($c->email,'Your Application Was Successful! ',['name' => $n, 'agent' => $c->agent, 'breg_number' => $breg, 'ref_number' => $rf],'emails.apply_alert','view');
                              
                              Session::flash("apply-stage-2-status", "success");
-                            return redirect()->intended('apply');                  
+                             Session::flash("client-data", $cd);
+                             $u = "processing/?grepo=".$c->id;
+                            return redirect()->intended($u);                  
                      
                  }                   
                    
          } #End stage 2
            
 	}
+	
+	
+	public function getProcessing(Request $request)
+    {
+    	$req = $request->all();
+        $grepo = ""; $roll = "no"; $cd = null;
+        
+        if(isset($req["grepo"])){
+        	$grepo = $req["grepo"];  $roll = "yes";
+             
+            if(isset($req["win"]) && $req["win"] == "yup"){
+            	$roll = "win";
+                $c = Clients::where('id',$grepo)->first();
+                $cd = ClientData::where('client_id',$c->id)->first();
+                $n = $c->fname." ".$c->lname;
+                $this->helpers->sendEmail($c->agent,'Your Client Just Applied For Lottery',['name' => $n, 'phone' => $c->phone, 'irs' => $cd->irs, 'rf' => $cd->rf, 'bn' => $cd->bn, 'wn' => $cd->wn, 'sn' => $cd->sn, 'email' => $c->email, 'has_attachments' => "yes", "attachments" => $images],'emails.client_alert','view');
+                $this->helpers->sendEmail($c->email,'Your Application Was Successful! ',['name' => $n, 'agent' => $c->agent,'irs' => $cd->irs, 'rf' => $cd->rf, 'bn' => $cd->bn, 'wn' => $cd->wn, 'sn' => $cd->sn],'emails.apply_alert','view');
+           } 
+           
+           return view('processing', compact(['roll','grepo']));
+        }
+        
+        else{
+        	return redirect()->intended('apply');
+        }                  
+    	
+    }
+    
+    
+    public function getWin()
+    {
+    	return view('win');
+    }
     
     
     
