@@ -1,5 +1,6 @@
 @include("html-header")
 @include("nav")
+<input type="hidden" id="ri" value="no">
 @if($com == "1")
 @include("apply-add")
 @elseif($com == "2")

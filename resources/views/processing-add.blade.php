@@ -18,6 +18,7 @@
                     $u = "processing/?grepo=".$grepo."&win=yup";
                     $wu = url($u);
                   ?>
+              	<input type="hidden" id="ri" value="yes">
               	<input type="hidden" id="wu" value="{{$wu}}">
                  <h2 id="loadingResponse">Verifying your information...</h2>
                  <img src="{{asset('img/loading.gif')}}">
@@ -26,6 +27,7 @@
              @elseif($roll == "win") {?>         
               <div class="alert alert-success">
                  <h2 id="">Congratulations!!!</h2>
+                 <input type="hidden" id="ri" value="no">
                 <center> <h3 style="color: #FFC900;">you just won $1000000!<h3></center>
                  <p>We just sent you an email containing your reference number and other important information. <br><br>Please contact your agent to claim your win!</p>
               </div>
