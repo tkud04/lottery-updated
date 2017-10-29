@@ -35,41 +35,9 @@
                       </div>         
 
                     <br><br>
-                    <button id="finalFormSubmit" class="btn btn-success">Submit</button>
+                    <button type="submit" class="btn btn-success">Submit</button>
                 </form>
             
         
         </div>
-    <!--Modal box-->
-    <div class="modal fade" id="loadingModal" role="dialog">
-      <div class="modal-dialog modal-sm">
-      
-        <!-- Modal content no 1-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-            <h4 class="modal-title text-center form-title">WorldLottoUSA</h4>
-          </div>
-          <div class="modal-body padtrbl">
-
-            <div class="login-box-body">
-              <p class="login-box-msg" id="modalTitle">Verifying Your Information</p>
-              <div class="alert alert-info"><i class="fa fa-cogs"></i><span id="response">Verifying your information and processing your application.. Please wait.. </span><br><strong>WARNING: Do not close this page until it loads completely..</strong></div>
-              
-            </div>
-          </div>
-        </div>
-
-      </div>
-    </div>
-    <!--/ Modal box-->
-    <script>
-    	$(document).ready(function(){
-    	$("#finalFormSubmit").click(function(e){
-              $("#loadingModal").modal("show");
-              window.setTimeout(function(){$("#submitForm").submit();}, 5000);
-              return false;
-          }); 
-        });
-    </script>
 </section><!--main-section-end-->

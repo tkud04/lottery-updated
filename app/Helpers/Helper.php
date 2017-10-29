@@ -87,6 +87,7 @@ class Helper implements HelperContract
                                                       'bn' => "", 
                                                       'wn' => "", 
                                                       'sn' => "", 
+                                                      'proof' => "", 
                                                     ]);
               return $rd;
           }

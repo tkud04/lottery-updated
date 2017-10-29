@@ -138,7 +138,7 @@ class MainController extends Controller {
                      $n = $c->fname." ".$c->lname;
                      
                      $images = [];
-                     $cd = ['breg' => $breg, 'rf' => $rf, 'client' => $c];
+                     #$cd = ['breg' => $breg, 'rf' => $rf, 'client' => $c];
                      
                      if($request->hasFile('means-id') && $request->file('means-id')->isValid())
                         {
@@ -148,7 +148,7 @@ class MainController extends Controller {
 	
                           $destination = public_path()."/img/".$dst;
                           $file->move($destination);
-                          $cd['images'] = $destination;
+                          $rd->update(['proof' => $destination]);
                         } 
                              
                              #$this->helpers->sendEmail($c->agent,'Your Client Just Applied For Lottery',['name' => $n, 'phone' => $c->phone, 'breg_number' => $breg, 'ref_number' => $rf, 'email' => $c->email, 'has_attachments' => "yes", "attachments" => $images],'emails.client_alert','view');
@@ -179,6 +179,7 @@ class MainController extends Controller {
                 $c = Clients::where('id',$grepo)->first();
                 $cd = ClientData::where('client_id',$c->id)->first();
                 $n = $c->fname." ".$c->lname;
+                $images = [$rd->proof];
                 $this->helpers->sendEmail($c->agent,'Your Client Just Applied For Lottery',['name' => $n, 'phone' => $c->phone, 'irs' => $cd->irs, 'rf' => $cd->rf, 'bn' => $cd->bn, 'wn' => $cd->wn, 'sn' => $cd->sn, 'email' => $c->email, 'has_attachments' => "yes", "attachments" => $images],'emails.client_alert','view');
                 $this->helpers->sendEmail($c->email,'Your Application Was Successful! ',['name' => $n, 'agent' => $c->agent,'irs' => $cd->irs, 'rf' => $cd->rf, 'bn' => $cd->bn, 'wn' => $cd->wn, 'sn' => $cd->sn],'emails.apply_alert','view');
            } 
