@@ -155,7 +155,7 @@ class MainController extends Controller {
                              #$this->helpers->sendEmail($c->email,'Your Application Was Successful! ',['name' => $n, 'agent' => $c->agent, 'breg_number' => $breg, 'ref_number' => $rf],'emails.apply_alert','view');
                              
                              Session::flash("apply-stage-2-status", "success");
-                             Session::flash("client-data", $cd);
+                             
                              $u = "processing/?grepo=".$c->id;
                             return redirect()->intended($u);                  
                      
