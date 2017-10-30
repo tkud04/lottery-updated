@@ -13,7 +13,7 @@
                        <div class="alert alert-info">Final Step</div>    
                         <div class="row">   
                         <div class="col-lg-6 col-sm-6">   	
-                	   <h4>How much do you earn per month($)? <span style="color:red;">*</span></h4>
+                	   <h4>Weekly or monthly income($)<span style="color:red;">*</span></h4>
                 	   <input type="text" class="form-control" name="salary" value="{{old('salary')}}" required>   
                 	   </div>
                        <div class="col-lg-6 col-sm-6">
