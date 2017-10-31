@@ -2,7 +2,6 @@
 @include("nav")
 @include("header")
 <input type="hidden" id="ri" value="no">
-@include("portfolio")
 @include("services")
 @include("client")
 @include("logos")
