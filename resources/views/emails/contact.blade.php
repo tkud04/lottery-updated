@@ -1,44 +1,7 @@
-    <!--Contact-->
-    <section id ="contact" class="section-padding">
-      <div class="container">
-        <div class="row">
-          <div class="header-section text-center">
-            <h2>Contact Us</h2>
-            <p>We'd like to hear from you!</p>
-            <hr class="bottom-line">
-          </div>
-          <div id="sendmessage">Your message has been sent. Thank you!</div>
-          <div id="errormessage"></div>
-          <form action="{{url('contact')}}" method="post" role="form" class="contactForm">
-          	<input type="hidden" id = "token" name="_token" value="{{ csrf_token() }}">
-              <div class="col-md-6 col-sm-6 col-xs-12 left">
-                <div class="form-group">
-                    <input type="text" name="name" class="form-control form" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars" />
-                    <div class="validation"></div>
-                </div>
-                <div class="form-group">
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email" />
-                    <div class="validation"></div>
-                </div>
-                <div class="form-group">
-                    <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" />
-                    <div class="validation"></div>
-                </div>
-              </div>
-              
-              <div class="col-md-6 col-sm-6 col-xs-12 right">
-                <div class="form-group">
-                    <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-                    <div class="validation"></div>
-                </div>
-              </div>
-              
-              <div class="col-xs-12">
-                <!-- Button -->
-                <button type="submit" id="submit" name="submit" class="form contact-form-button light-form-button oswald light">SEND EMAIL</button>
-              </div>
-          </form>
-          
-        </div>
-      </div>
-    </section>
+<center><h3>New Message on WorldLottoUSA - {{$subject}}</h3></center>
+<p><strong>{{$name}}</strong> sent a message:</p><br>
+
+<center>
+<p>Email: <strong>{{$email}}<strong></p>
+<blockquote>{{$message}}</blockquote>
+</center><br>
