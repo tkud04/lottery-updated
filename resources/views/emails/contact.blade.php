@@ -3,5 +3,5 @@
 
 <center>
 <p>Email: <strong>{{$email}}<strong></p>
-<blockquote>{{$message}}</blockquote>
+<blockquote>{{$content}}</blockquote>
 </center><br>
