@@ -4,8 +4,8 @@ ul.shabba li{
 } 
 
 div.shabba img{
-  width: 10%;
-  height: 10%;
+  width: 4%;
+  height: 4%;
 }
 </style>
 
@@ -19,6 +19,32 @@ div.shabba img{
 <img src="img/flags/flag-of-Italy.png" alt="">
 <img src="img/flags/flag-of-Germany.png" alt="">
 <img src="img/flags/flag-of-France.png" alt="">
+<img src="img/flags/flag-of-Brazil.png" alt="">
+<img src="img/flags/flag-of-Venezuela.png" alt="">
+<img src="img/flags/flag-of-Sweden.png" alt="">
+<img src="img/flags/flag-of-Turkey.png" alt="">
+<img src="img/flags/flag-of-Russia.png" alt="">
+<img src="img/flags/flag-of-Portugal.png" alt="">
+<img src="img/flags/flag-of-New-Zealand.png" alt="">
+<img src="img/flags/flag-of-Netherlands.png" alt="">
+<img src="img/flags/flag-of-Malaysia.png" alt="">
+<img src="img/flags/flag-of-Liechtenstein.png" alt="">
+<img src="img/flags/flag-of-Lebanon.png" alt="">
+<img src="img/flags/flag-of-Japan.png" alt="">
+<img src="img/flags/flag-of-Jamaica.png" alt="">
+<img src="img/flags/flag-of-Ireland.png" alt="">
+<img src="img/flags/flag-of-India.png" alt="">
+<img src="img/flags/flag-of-Iceland.png" alt="">
+<img src="img/flags/flag-of-Hungary.png" alt="">
+<img src="img/flags/flag-of-Ghana.png" alt="">
+<img src="img/flags/flag-of-Greece.png" alt="">
+<img src="img/flags/flag-of-Cote-d-Ivoire.png" alt="">
+<img src="img/flags/flag-of-Estonia.png" alt="">
+<img src="img/flags/flag-of-Ecuador.png" alt="">
+<img src="img/flags/flag-of-Czech-Republic.png" alt="">
+<img src="img/flags/flag-of-Denmark.png" alt="">
+<img src="img/flags/flag-of-China.png" alt="">
+<img src="img/flags/flag-of-Chile.png" alt="">
 </center>
 </div>
 
