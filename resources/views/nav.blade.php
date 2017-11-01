@@ -51,7 +51,7 @@ div.shabba img{
 <nav class="main-nav-outer" id="test"><!--main-nav-start-->
 	<div class="container">
         <ul class="main-nav">
-        	<li><a href="#header">Home</a></li>
+        	<li><a href="{{url('/')}}">Home</a></li>
             <li><a href="#service">About Us</a></li>
             <li><a href="{{url('apply')}}">Apply Now</a></li>
             <li class="small-logo"><a href="#header"><img src="img/small-logo.png" alt=""></a></li>
