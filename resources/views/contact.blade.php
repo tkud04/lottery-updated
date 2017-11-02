@@ -1,3 +1,8 @@
+@extends('layout') 
+
+@section('title', "Contact Us")
+
+@section('content')        
 <section class="business-talking"><!--business-talking-start-->
 	<div class="container">
         <h2>Let's Talk Business.</h2>
@@ -18,7 +23,7 @@
                 </div>
                 <div class="contact-info-box email clearfix">
                 	<h3><i class="fa-pencil"></i>email:</h3>
-                	<span>info@worldlottousa.com</span>
+                	<span>info@worldlotteryusa.com</span>
                 </div>
             	<div class="contact-info-box hours clearfix">
                 	<h3><i class="fa-clock-o"></i>Hours:</h3>
@@ -63,3 +68,4 @@
         </div>
 </section>
 </div>
+@stop

@@ -237,5 +237,25 @@ class MainController extends Controller {
                  
                           
 	}
+	
+	public function getContact()
+    {
+    	return view('contact');
+    }
+    
+    public function getAbout()
+    {
+    	return view('services');
+    }
+    
+    public function getTerms()
+    {
+    	return view('terms');
+    }
+    
+    public function getTestimonials()
+    {
+    	return view('team');
+    }
 
 }

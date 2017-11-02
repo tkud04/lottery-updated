@@ -52,12 +52,12 @@ div.shabba img{
 	<div class="container">
         <ul class="main-nav">
         	<li><a href="{{url('/')}}">Home</a></li>
-            <li><a href="#service">About Us</a></li>
+            <li><a href="{{url('about')}}">About Us</a></li>
             <li><a href="{{url('apply')}}">Apply Now</a></li>
-            <li class="small-logo"><a href="#header"><img src="img/small-logo.png" alt=""></a></li>
-            <li><a href="#">Terms</a></li>
-            <li><a href="#team">Tales of Joy</a></li>
-            <li><a href="#contact">Contact</a></li>
+            <li class="small-logo"><a href="{{url('/')}}"><img src="img/coat-of-arms.png" alt=""></a></li>
+            <li><a href="{{url('terms')}}">Terms</a></li>
+            <li><a href="{{url('tales-of-joy')}}">Tales of Joy</a></li>
+            <li><a href="{{url('contact')}}">Contact</a></li>
         </ul>
         <a class="res-nav_click" href="#"><i class="fa-bars"></i></a>
     </div>

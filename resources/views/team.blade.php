@@ -1,3 +1,8 @@
+@extends('layout') 
+
+@section('title', "Tales of Joy")
+
+@section('content')
 <section class="main-section team" id="team"><!--main-section team-start-->
 	<div class="container">
         <h2>more tales of joy</h2>
@@ -51,3 +56,4 @@
         </div>
     </div>
 </section><!--main-section team-end-->
+@stop

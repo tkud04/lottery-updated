@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, maximum-scale=1">
 
-<title>LottoUSA - Win $1 Million Today! </title>
+<title>@yield('title') | WorldLotteryUSA - Win $1 Million Today! </title>
 <link rel="icon" href="favicon.png" type="image/png">
 <link rel="shortcut icon" href="favicon.ico" type="img/x-icon">
 

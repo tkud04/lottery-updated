@@ -1,3 +1,8 @@
+@extends('layout') 
+
+@section('title', "About Us")
+
+@section('content')
 <section class="main-section" id="service"><!--main-section-start-->
 	<div class="container">
     	<h2>We exist to change lives</h2>
@@ -5,7 +10,7 @@
         <div class="row">
         	<div class="col-lg-6 col-sm-6 wow fadeInLeft delay-05s">
             	<div class="text-success">
-                	<h3>Thank you for your interest in this year's <strong>WorldLottoUSA</strong>.</h3><br>
+                	<h3>Thank you for your interest in this year's <strong>WorldLotteryUSA yearly lottery</strong>.</h3><br>
                 	
                     <h2>Don't miss your chance to be a millionaire - apply online today and be one of the next lottery winners.</h2><br>
                 </div>
@@ -62,3 +67,4 @@
         </div>
 	</div>
 </section><!--main-section alabaster-end-->
+@stop
