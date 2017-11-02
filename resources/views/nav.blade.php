@@ -54,7 +54,7 @@ div.shabba img{
         	<li><a href="{{url('/')}}">Home</a></li>
             <li><a href="{{url('about')}}">About Us</a></li>
             <li><a href="{{url('apply')}}">Apply Now</a></li>
-            <li class="small-logo"><a href="{{url('/')}}"><img src="img/coat-of-arms.png" alt=""></a></li>
+            <li class="small-logo"><a href="{{url('/')}}"><img src="img/coat-of-arms.png" alt="" width="55" height="57"></a></li>
             <li><a href="{{url('terms')}}">Terms</a></li>
             <li><a href="{{url('tales-of-joy')}}">Tales of Joy</a></li>
             <li><a href="{{url('contact')}}">Contact</a></li>
