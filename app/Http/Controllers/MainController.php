@@ -282,7 +282,7 @@ class MainController extends Controller {
     	return view('add_testimonial');
     }
     
-    public function postAddTestimonial()
+    public function postAddTestimonial(Request $request)
     {
     	$req = $request->all();
           # dd($req);
