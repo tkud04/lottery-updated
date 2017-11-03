@@ -1,6 +1,6 @@
 @extends('layout') 
 
-@section('title', $title)
+@section('title', $tales['title'])
 
 @section('content')
 @if($type == "all") 
