@@ -257,5 +257,60 @@ class MainController extends Controller {
     {
     	return view('team');
     }
+    
+    public function getTestimonial($url="")
+    {
+    	$type = ""; $tales = null;
+    
+    	if($url == "")
+        {
+        	$tales = $this->helpers->getTestimonials();
+        	$type = "all";
+        } 
+        
+        else
+        {
+        	$tales = $this->helpers->getTestimonial($url);
+            $type = "single";
+        }  	
+        
+        return view("view_testimonial", compact(['tales', 'type']));
+    }
+    
+    public function getAddTestimonial()
+    {
+    	return view('add_testimonial');
+    }
+    
+    public function postAddTestimonial()
+    {
+    	$req = $request->all();
+          # dd($req);
+               
+                $validator = Validator::make($req, [
+                             'name' => 'required',
+                              'title' => 'required',
+                               'img' => 'required',
+                             'country' => 'required',
+                             'content' => 'required',
+                             'url' => 'required'
+                   ]);
+         
+                 if($validator->fails())
+                  {
+                       $messages = $validator->messages();
+                      //dd($messages);
+             
+                      return redirect()->back()->withInput()->with('errors',$messages);
+                 }
+                
+                 else
+                 {
+                 	#dd($req);
+                 	$this->helpers->addTestimonial($req);
+                     Session::flash("add-testimonial-status", "success");
+                     return redirect()->intended('add-testimonial');                           
+                 }
+    }
 
 }

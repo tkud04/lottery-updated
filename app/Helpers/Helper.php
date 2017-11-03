@@ -8,6 +8,7 @@ use Mail;
 use Auth; 
 use App\Clients;
 use App\ClientData;
+use App\Testimonials;
 
 class Helper implements HelperContract
 {
@@ -91,6 +92,56 @@ class Helper implements HelperContract
                                                     ]);
               return $rd;
           }
+          
+          function addTestimonial($data)
+           {
+           	$ret = Testimonials::create(['name' => $data['name'], 
+                                                      'country' => $data['country'],                                                      
+                                                      'content' => $data['content'], 
+                                                      'url' => $data['url'], 
+                                                       'title' => $data['title'], 
+                                                        'img' => $data['img']
+                                                      ]);
+                                                      
+                return $ret;
+           } 
+           
+           function getTestimonials()
+          {
+          	$ret = [];
+          	$t = Testimonials::all();
+          	 if($t != null)
+              {
+              	foreach($t as $tales){
+              	$temp = [];
+              	$temp['title'] = $tales->title;
+                  $temp['img'] = $tales->img;
+                  $temp['name'] = $tales->name;
+                  $temp['country'] = $tales->country;
+                  $temp['url'] = $tales->url;
+                  $temp['content'] = $tales->content;
+                  array_push($ret, $temp);
+                 } 
+              }
+              return $ret;
+          }
+          
+          function getTestimonial($url)
+          {
+          	$temp = [];
+          	$tales = Testimonials::where("url",$url)->first();
+          	 if($tales != null)
+              {
+              	$temp['title'] = $tales->title;
+                  $temp['img'] = $tales->img;
+                  $temp['name'] = $tales->name;
+                  $temp['country'] = $tales->country;
+                  $temp['url'] = $tales->url;
+                  $temp['content'] = $tales->content;              
+              }
+              return $temp;
+          }
+          
           
           function getIRSNumber()
           {

@@ -10,6 +10,9 @@ Interface HelperContract
         public function getReferenceNumber();      
         public function getBatchNumber();      
         public function getWinningNumber();      
-        public function getSerialNumber();      
+        public function getSerialNumber();     
+        public function addTestimonial($data);
+        public function getTestimonials();
+        public function getTestimonial($url);
 }
  ?>

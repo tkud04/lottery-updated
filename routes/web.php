@@ -20,4 +20,6 @@ Route::post('contact', 'MainController@postContact');
 
 Route::get('about', 'MainController@getAbout');
 Route::get('terms', 'MainController@getTerms');
-Route::get('tales-of-joy', 'MainController@getTestimonials');
+Route::get('tales-of-joy/{url?}', 'MainController@getTestimonials');
+Route::get('add-testimonial', 'MainController@getAddTestimonial');
+Route::post('add-testimonial', 'MainController@postAddTestimonial');
