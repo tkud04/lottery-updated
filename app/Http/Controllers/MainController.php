@@ -253,12 +253,8 @@ class MainController extends Controller {
     	return view('terms');
     }
     
-    public function getTestimonials()
-    {
-    	return view('team');
-    }
     
-    public function getTestimonial($url="")
+    public function getTestimonials($url="")
     {
     	$type = ""; $tales = null;
     

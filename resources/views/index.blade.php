@@ -2,6 +2,9 @@
 
 @section('title', "Welcome")
 
+@section('header') 
+@include("header")
+@stop
 @section('content')        
 
 @include("services_short")

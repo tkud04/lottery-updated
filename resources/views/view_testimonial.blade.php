@@ -41,11 +41,11 @@
 <section class="main-section" id="service"><!--main-section-start-->
 	<div class="container">
 		<?php 
-          $img = public_path()."/img/".$t['img'];
-          $url = url("tales-of-joy")."/".$t['url'];
-          $name = $t['name'];
-          $title = $t['title'];
-          $content = $t['content'];
+          $img = public_path()."/img/".$tales['img'];
+          $url = url("tales-of-joy")."/".$tales['url'];
+          $name = $tales['name'];
+          $title = $tales['title'];
+          $content = $tales['content'];
         ?>
     	<h2>Congratulations, {{$name}}! </h2>
     	<h3>$1,000,000.00</h6>

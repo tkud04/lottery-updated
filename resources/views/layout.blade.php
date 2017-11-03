@@ -1,6 +1,6 @@
 @include("html-header")
 @include("nav")
-@include("header")
+@yield("header") 
 <input type="hidden" id="ri" value="no">
 <!--------- Input errors -------------->
                     @if (count($errors) > 0)
