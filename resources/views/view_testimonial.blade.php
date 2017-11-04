@@ -11,7 +11,7 @@
         @if($tales != null && count($tales) > 0)
         @foreach($tales as $t)
         <?php 
-          $img = public_path()."/img/".$t['img'];
+          $img = "img/".$t['img'];
           $url = url("tales-of-joy")."/".$t['url'];
         ?>
         <div class="team-leader-block clearfix">
@@ -41,7 +41,7 @@
 <section class="main-section" id="service"><!--main-section-start-->
 	<div class="container">
 		<?php 
-          $img = public_path()."/img/".$tales['img'];
+          $img = "img/".$tales['img'];
           $url = url("tales-of-joy")."/".$tales['url'];
           $name = $tales['name'];
           $title = $tales['title'];
@@ -55,7 +55,7 @@
             </figure>
         	<div class="col-lg-8 col-sm-6 wow fadeInLeft delay-05s">
         	   <h2>{{$title}}</h2>
-            	{{$content}}
+            	{!! $content !!}
             </div>                   
         </div>
 	</div>
