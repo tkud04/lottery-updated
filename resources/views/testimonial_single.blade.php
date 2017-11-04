@@ -15,9 +15,9 @@
     	<h2>Congratulations, {{$name}}! </h2>
     	<h3>$1,000,000.00</h6>
         <div class="row">
-        	<figure class="col-lg-4 col-sm-6  wow fadeInUp delay-02s">
+        	<div class="col-lg-4 col-sm-6  wow fadeInUp delay-02s">
             	<img src="{{$img}}" alt=""><br>
-            </figure>
+            </div>
         	<div class="col-lg-8 col-sm-6 wow fadeInLeft delay-05s">
         	   <h2>{{$title}}</h2>
             	{!! $content !!}
