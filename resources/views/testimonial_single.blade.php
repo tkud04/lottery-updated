@@ -1,7 +1,7 @@
 @extends('layout') 
 
 <?php 
-          $img = "img/".$tales['img'];
+          $img = asset("img/".$tales['img']);
           $url = url("tales-of-joy")."/".$tales['url'];
           $name = $tales['name'];
           $title = $tales['title'];
