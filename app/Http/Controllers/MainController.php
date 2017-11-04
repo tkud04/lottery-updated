@@ -256,21 +256,23 @@ class MainController extends Controller {
     
     public function getTestimonials($url="")
     {
-    	$type = ""; $tales = null;
+    	$type = ""; $tales = null; $v = "";
     
     	if($url == "")
         {
         	$tales = $this->helpers->getTestimonials();
         	$type = "all";
+            $v = "view_testimonial";
         } 
         
         else
         {
         	$tales = $this->helpers->getTestimonial($url);
             $type = "single";
+            $v = "testimonial_single";
         }  	
         
-        return view("view_testimonial", compact(['tales', 'type']));
+        return view($v, compact(['tales', 'type']));
     }
     
     public function getAddTestimonial()
