@@ -7,14 +7,13 @@
 	<div class="container">
         <h2>more tales of joy</h2>
         <h6>Take a closer look into what you stand to gain.</h6>
-        <center>
         @if($tales != null && count($tales) > 0)
         @foreach($tales as $t)
         <?php 
           $img = "img/".$t['img'];
           $url = url("tales-of-joy")."/".$t['url'];
         ?>
-        <div class="team-leader-block clearfix" style="align: center; !important">
+        <div class="team-leader-block clearfix">
             <div class="team-leader-box">
                 <div class="team-leader wow fadeInDown delay-03s"> 
                     <div class="team-leader-shadow"><a href="#"></a></div>
@@ -30,10 +29,10 @@
                 <span class="wow fadeInDown delay-09s">{{$t['country']}}!</span>
                 <h3 class="wow fadeInDown delay-03s"> $1,000,000</h3>
                 <a href="{{$url}}" class="btn btn-danger">Read more</a>
-            </center>
-            @endforeach
-            @endif
+              </div>
             </div>
+            @endforeach
+            @endif         
 
     </div>
 </section><!--main-section team-end-->
