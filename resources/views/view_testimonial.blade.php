@@ -7,6 +7,7 @@
 	<div class="container">
         <h2>more tales of joy</h2>
         <h6>Take a closer look into what you stand to gain.</h6>
+        <center>
         @if($tales != null && count($tales) > 0)
         @foreach($tales as $t)
         <?php 
@@ -32,6 +33,7 @@
             </div>
             @endforeach
             @endif
+            </center>
 
     </div>
 </section><!--main-section team-end-->
