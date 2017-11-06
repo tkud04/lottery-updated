@@ -1,4 +1,5 @@
 <script type="text/javascript" src="{{asset('js/jquery.1.8.3.min.js')}}"></script>
+<script type="text/javascript" src="{{asset('js/jquery-ui.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/bootstrap.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/jquery-scrolltofixed.js')}}"></script>
 <script type="text/javascript" src="{{asset('js/jquery.easing.1.3.js')}}"></script>
