@@ -30,7 +30,7 @@
                 	   </div>
                        <div class="col-lg-6 col-sm-6">
                 	   <h4>And Finally.. <span style="color:red;">*</span></h4>
-                       <p>By signing up you verify that you have read the <a href="#">WARNING</a> and also agree to the <a href="#" class="text-info small">Terms and Conditions</a> and <a href="#" class="text-info small">Privacy Policy</a>.</p>
+                       <p><input type="checkbox" name="terms">By signing up you verify that you agree to the <a href="{{url('terms')}}" target="_blank" class="text-info small">Terms and Conditions</a> and <a href="{{url('terms')}}" target="_blank"  class="text-info small">Privacy Policy</a>.</p>
                 	   </div>
                       </div>         
 
