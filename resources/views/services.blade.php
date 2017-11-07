@@ -10,8 +10,8 @@
         <div class="row">
         	<div class="col-lg-6 col-sm-6 wow fadeInLeft delay-05s">
             	<div class="text-success">
-                	<h3>Thank you for your interest in this year's <strong>WorldLottoUSA</strong>.</h3><br>
-                	<h3>Founded in 1999, The WorldLotteryUSA Enterprises Limited and its associated brands operate an independent lottery service and are neither affiliated with nor endorsed by official Lottery organizations.</h3>
+                	<h3>Thank you for your interest in this year's <strong>WorldLotteryUSA</strong>.</h3><br>
+                	<h3>Founded in 2016, The WorldLotteryUSA Enterprises Limited and its associated brands operate an independent lottery service and are neither affiliated with nor endorsed by official Lottery organizations.</h3>
                     <h3>WorldLotteryUSA holds yearly draws by picking 50 people at random based on their email address. Each person picked stands a chance to win $1 million as Guaranteed Prize, should he/she choose to accept and apply for the draw.</h3>
                     <h3>Selected people who refuse to contact their assigned Agents to claim their winnings within 7 days will have their winnings donated to a charity organization of our choosing.</h3><br>
                 	
@@ -55,7 +55,7 @@
                     </div>	
                 	<div class="featured-box-col2 wow fadeInRight delay-04s">
                         <h3 style="font-weight: bold;">charitable cause</h3>
-                        <p>We give out these lottery wins to various people from around the world because we value changing people's lives</p>
+                        <p>Each year we provide $50,000,000 as lottery winnings for 50 lucky people all around the world! We also donate huge sums to charity organizations of our choosing.</p>
                     </div>    
                 </div>
                 <div class="featured-box">

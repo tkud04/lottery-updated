@@ -63,7 +63,7 @@ class MainController extends Controller {
                              'fname' => 'required',
                              'lname' => 'required',
                              'phone' => 'required|numeric', 
-                              'email' => 'required|email',                               
+                              'email' => 'required|email|unique:clients',                               
                                'gender' => 'required', 
                                 'birth-year' => 'required|numeric', 
                                 'birth-month' => 'required|numeric', 
@@ -110,7 +110,8 @@ class MainController extends Controller {
                              'grapo' => 'required',
                              'agent' => 'required|email',                               
                              'salary' => 'required',
-                             'means-id' => 'required|image',     
+                             'means-id' => 'required|image',  
+                             'terms' => 'accepted',   
                    ]);    
 
                  if($validator->fails())

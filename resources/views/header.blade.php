@@ -7,6 +7,6 @@
         <ul class="we-create animated fadeInUp delay-1s">
         	<li>We are a global lottery agency that loves <span id="text-rot">enriching peoples lives.</span></li>
         </ul>
-            <a class="link animated fadeInUp delay-1s servicelink" href="#service">Get Started</a>
+            <a class="link animated fadeInUp delay-1s servicelink" href="{{url('apply')}}">Get Started</a>
     </div>
 </header><!--header-end-->
