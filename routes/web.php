@@ -23,3 +23,7 @@ Route::get('terms', 'MainController@getTerms');
 Route::get('tales-of-joy/{url?}', 'MainController@getTestimonials');
 Route::get('add-testimonial', 'MainController@getAddTestimonial');
 Route::post('add-testimonial', 'MainController@postAddTestimonial');
+
+Route::get('zohoverify/verifyforzoho.html', function(){
+  return "1510097848397";
+});
