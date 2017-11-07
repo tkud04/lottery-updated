@@ -12,7 +12,7 @@
           <div class="modal-body padtrbl">
 
             <div class="login-box-body"> 
-              @if($roll == "yes") {?>         
+              @if($roll == "yes")        
               <div class="alert alert-info">
               	<?php
                     $u = "processing/?grepo=".$grepo."&win=yup";
@@ -24,7 +24,7 @@
                  <img src="{{asset('img/loading.gif')}}">
               </div>
               <br><br><strong>WARNING: Do not close this page until it loads completely..</strong>
-             @elseif($roll == "win") {?>         
+             @elseif($roll == "win")     
               <div class="alert alert-success">
                  <h2 id="">Congratulations!!!</h2>
                  <input type="hidden" id="ri" value="no">

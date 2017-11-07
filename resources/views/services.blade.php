@@ -18,11 +18,13 @@
                     <h2>Don't miss your chance to be a millionaire - apply online today and be one of the next lottery winners.</h2><br>
                 </div>
             </div>
-            <figure class="col-lg-6 col-sm-6  text-right wow fadeInUp delay-02s">
+            <div class="col-lg-6 col-sm-6 wow fadeInLeft delay-05s">
+               <figure class="text-right wow fadeInUp delay-02s">
             	<img src="img/money-1.jpg" alt="">
                  <h4>Each year $50 million will be issued as lottery winnings to people from all over the world. The draw will take place through random computer generated lottery draw.</h4><br>
-            </figure>
-        
+               </figure>
+               @include("ads")
+            </div>
         </div>
 	</div>
 </section><!--main-section-end-->
