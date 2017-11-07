@@ -9,6 +9,7 @@
 
 @include("services_short")
 @include("client")
+@include("ads")
 @include("logos")
 
 @stop
