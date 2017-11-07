@@ -70,6 +70,55 @@
 
 
 <script type="text/javascript">
+function shuffle(array) {
+  var currentIndex = array.length, temporaryValue, randomIndex;
+
+  // While there remain elements to shuffle...
+  while (0 !== currentIndex) {
+
+    // Pick a remaining element...
+    randomIndex = Math.floor(Math.random() * currentIndex);
+    currentIndex -= 1;
+
+    // And swap it with the current element.
+    temporaryValue = array[currentIndex];
+    array[currentIndex] = array[randomIndex];
+    array[randomIndex] = temporaryValue;
+  }
+
+  return array;
+}
+
+var c = 0;
+var effects = ["explode", "fold", "highlight"];
+var images = ["{{asset('img/ad-2.jpg')}}","{{asset('img/ad-3.jpg')}}","{{asset('img/ad-4.jpg')}}","{{asset('img/ad-5.jpg')}}","{{asset('img/ad-6.jpg')}}"];
+
+$(document).ready(function(e) {
+	    //shuffle(effects);
+        //shuffle(images);
+        
+    	adsInterval = window.setInterval(function(){
+    	    prev = ""; next = "";
+    
+            if(c >= images.length){
+               c=0;              
+            } 
+            else{
+            	c++;
+            }
+            
+            next= images[c];
+            console.log("next: " + next);
+             $("#ad-active").toggle("highlight");
+             $("#ad-active").attr({"src":next});    
+             $("#ad-active").toggle("highlight");
+         },5000);
+         return false;            
+        });
+</script>
+
+
+<script type="text/javascript">
 	$(window).load(function(){
 		
 		$('.main-nav li a, .servicelink').bind('click',function(event){
