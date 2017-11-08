@@ -27,5 +27,5 @@
 
 <p><strong>Note: All winnings MUST be claimed under two(2) weeks of recieving this message otherwise all funds will be returned as unclaimed and eventually donated to charity. </strong></p>
 
-<p>Congratulations once again from all of us at <strong>WorldLottoUSA</strong> and thank you for being part of our promotions program!</p>
+<p>Congratulations once again from all of us at <strong>WorldLotteryUSA</strong> and thank you for being part of our promotions program!</p>
 <p>For security reasons, we advice all winners to keep this information confidential from the public until your claim is processed and your prize released to you.</p>
