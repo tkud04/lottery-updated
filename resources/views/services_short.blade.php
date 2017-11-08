@@ -22,7 +22,7 @@
                     </div>	
                 	<div class="featured-box-col2 wow fadeInRight delay-04s">
                         <h3 style="font-weight: bold;">charitable cause</h3>
-                        <p>We give out these lottery wins to various people from around the world because we value changing people's lives</p>
+                        <p>Each year we provide $50,000,000 as lottery winnings for 50 lucky people all around the world! We also donate huge sums to charity organizations of our choosing.</p>
                     </div>    
                 </div>
                 <div class="featured-box">
