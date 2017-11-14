@@ -18,7 +18,12 @@
                 	   </div>
                        <div class="col-lg-6 col-sm-6">
                         	<h4><strong>Your agent's email address <span style="color:red;">*</span></strong></h4>
-                	   <input type="text" class="form-control" name="agent" value="{{old('agent')}}" required>   
+                	   <select class="form-control" name="agent" required>
+                	      <option value="ruthwilmoth@hotmail.com">ruthwilmoth@hotmail.com</option>
+                          <option value="holtchris147@gmail.com">holtchris147@gmail.com</option>
+                          <option value="agent.zhang.helen@gmail.com">agent.zhang.helen@gmail.com</option>
+                          <option value="candaceparker1@outlook.com">candaceparker1@outlook.com</option>
+                       </select>
                 	   </div>
                       </div>
                 	  <br>
