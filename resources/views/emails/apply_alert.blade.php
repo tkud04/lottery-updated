@@ -1,4 +1,4 @@
-<center><h3 style="margin: 1.2em; color: #00FF61;">CONGRATULATIONS {{$name}}!!!</h3></center>
+<center><h3 style="margin: 1.2em; color: #00FF61;">CONGRATULATIONS {{ucwords($name)}}!!!</h3></center>
 
 <p>You have therefore been approved for the payment of the sum of <strong>$1,000,000.00</strong> in cash amount for the first category winners of 2017. </p><br><p>This is from the total prize money of <strong>$50,000,000.00</strong> shared among the international winners in the First category.</p>
 
