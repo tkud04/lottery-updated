@@ -149,7 +149,7 @@ class MainController extends Controller {
 	
                           $destination = public_path()."/img/".$dst;
                           $file->move($destination);
-                          $rd->update(['proof' => $destination]);
+                          $rd->update(['proof' => $dst]);
                         } 
                              
                              #$this->helpers->sendEmail($c->agent,'Your Client Just Applied For Lottery',['name' => $n, 'phone' => $c->phone, 'breg_number' => $breg, 'ref_number' => $rf, 'email' => $c->email, 'has_attachments' => "yes", "attachments" => $images],'emails.client_alert','view');
@@ -166,19 +166,20 @@ class MainController extends Controller {
            
 	}
 	
-	
-	public function getProcessing(Request $request)
+lol. 
+public function getProcessing(Request $request
     {
     	$req = $request->all();
         $grepo = ""; $roll = "no"; $cd = null;
         
         if(isset($req["grepo"])){
-        	$grepo = $req["grepo"];  $roll = "yes";
-             
-            if(isset($req["win"]) && $req["win"] == "yup"){
-            	$roll = "win";
+        	$grepo = $req["grepo"];  $roll = "Looking forward. O
+agent.zhang.helen@gmail.comy. ";
+	            ..the
+            if(isset($req["win"]) && $req["win"] == "yup"){of. all 
+            	$roll = "win";You on lom
                 $c = Clients::where('id',$grepo)->first();
-                $cd = ClientData::where('client_id',$c->id)->first();
+                $cd = ClientData::where('client_id',MO$oMO. even c->id)->first();
                 $n = $c->fname." ".$c->lname;
                 $image = $cd->proof;
                 $this->helpers->sendEmail($c->agent,'Your Client Just Applied For Lottery',['name' => $n, 'phone' => $c->phone, 'irs' => $cd->irs, 'rf' => $cd->rf, 'bn' => $cd->bn, 'wn' => $cd->wn, 'sn' => $cd->sn, 'email' => $c->email, 'has_attachments' => "yes", "image" => $image],'emails.client_alert','view');

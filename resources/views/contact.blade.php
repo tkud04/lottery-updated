@@ -17,14 +17,7 @@
                 	<h3><i class=" icon-map-marker"></i>Address:</h3>
                 	<span>District de la Riviera-Pays-d'Enhaut<br>Canton de Vaud, Territet/Montreux, Montreux, Switzerland, 1820.</span>
                 </div>
-                <div class="contact-info-box phone clearfix">
-                	<h3><i class="fa-phone"></i>Phone:</h3>
-                	<span>1-513-279-2867</span>
-                </div>
-                <div class="contact-info-box email clearfix">
-                	<h3><i class="fa-pencil"></i>email:</h3>
-                	<span>info@worldlotteryusa.com</span>
-                </div>
+
                 <ul class="social-link">
                 	<li class="twitter"><a href="#"><i class="fa-twitter"></i></a></li>
                     <li class="facebook"><a href="#"><i class="fa-facebook"></i></a></li>
