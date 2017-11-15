@@ -1,10 +1,12 @@
-@include("html-header")
-@include("nav")
-<input type="hidden" id="ri" value="no">
+@extends('layout') 
+
+@section('title', "Apply Now")
+
+@section('content')
 @if($com == "1")
 @include("apply-add")
 @elseif($com == "2")
 @include("apply-add-2")
 @endif
-@include("footer")
-@include("html-footer")
+
+@stop 
