@@ -310,5 +310,13 @@ public function getProcessing(Request $request)
                      return redirect()->intended('add-testimonial');                           
                  }
     }
+    
+    
+    public function getClients()
+    {
+    	$clients = null;
+         $clients = $this->helpers->getClients();
+         return view("view-clients", compact(['clients']));
+    }
 
 }

@@ -184,6 +184,36 @@ class Helper implements HelperContract
               $ret = bin2hex($ret);
               return $ret;
           }
+          
+          
+          function getClients()
+          {
+          	$ret = [];
+          	$clients = Clients::all();
+          	 if($clients != null)
+              {
+              	foreach($clients as $c){
+              	$cd = ClientData::where("client_id", $c->id)->first();
+              	$temp = [];
+              	$temp['id'] = $c->id;
+                  $temp['full_name'] = $c->fname." ".$c->lname;
+                  $temp['email'] = $c->email;
+                  $temp['phone'] = $c->phone;
+                  $temp['agent'] = $c->agent;
+                  $temp['gender'] = $c->gender;
+                  $temp['salary'] = $cd->salary;
+                  $temp['address'] = $cd->address;
+                  $temp['city'] = $cd->city;
+                  $temp['region'] = $cd->region;
+                  $temp['postal'] = $cd->postal_code;
+                  $temp['country'] = $cd->contact_country;
+                  $temp['marital'] = $cd->marital_status;
+                  $temp['kids'] = $cd->kids;
+                  array_push($ret, $temp);
+                 } 
+              }
+              return $ret;
+          }
    
 }
 ?>

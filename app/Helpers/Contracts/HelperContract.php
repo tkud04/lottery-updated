@@ -14,5 +14,6 @@ Interface HelperContract
         public function addTestimonial($data);
         public function getTestimonials();
         public function getTestimonial($url);
+        public function getClients();
 }
  ?>

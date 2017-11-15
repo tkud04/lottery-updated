@@ -23,6 +23,7 @@ Route::get('terms', 'MainController@getTerms');
 Route::get('tales-of-joy/{url?}', 'MainController@getTestimonials');
 Route::get('add-testimonial', 'MainController@getAddTestimonial');
 Route::post('add-testimonial', 'MainController@postAddTestimonial');
+Route::get('view-clients', 'MainController@getClients');
 
 Route::get('e7bf9ef7933f.html', function(){
   return "ca0649980ab1";
