@@ -172,7 +172,7 @@ public function getProcessing(Request $request)
         $grepo = ""; $roll = "no"; $cd = null;
         
         if(isset($req["grepo"])){
-        	$grepo = $req["grepo"];  $roll ="";
+        	$grepo = $req["grepo"];  $roll ="yes";
 
             if(isset($req["win"]) && $req["win"] == "yup"){
             	$roll = "win";
