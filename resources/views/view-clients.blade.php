@@ -25,9 +25,9 @@
 </tr>
 </thead>
 <tbody>
-<tr>
 @if($clients != null)
 @foreach($clients as $c)
+<tr>
 <td>{{$c['id']}}</td>
 <td>{{$c['full_name']}}</td>
 <td>{{$c['email']}}</td>
@@ -42,9 +42,9 @@
 <td>{{$c['country']}}</td>
 <td>{{$c['marital']}}</td>
 <td>{{$c['kids']}}</td>
+</tr>
 @endforeach
 @endif
-</tr>
 </tbody>
 </table>
     </div>
