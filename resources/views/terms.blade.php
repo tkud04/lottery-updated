@@ -46,7 +46,7 @@ p.ash{
 <p class="wow fadeInDown delay-06s ash">If you are an (i) employee, director, officer, or Agent (defined below) of WorldLotteryUSA, or (ii) entity or person that is connected with the management or operation of a Lottery Draw, including each Lottery Operator and its employees; or (iii) a spouse, de facto partner, parent, sibling, child or close family member of any of the persons mentioned in (i) and (ii) above, then you are prohibited from applying and participating in any Services. "Agent" means any employee that we engage to liaise with selected lottery winners on our behalf.</p>
 
 <h2>Lottery Draws.</h2>
-<p class="wow fadeInDown delay-06s ash">6.1. Each Lottery Draw is performed by our Lottery Selection System. You reserve the right to apply or refuse to apply for our Lottery Draw if selected. Winners who refuse to apply will have their funds donated to charity.</p>
+<p class="wow fadeInDown delay-06s ash">6.1. Each Lottery Draw is performed by our Lottery Selection System. You reserve the right to apply or refuse to apply for our Lottery Draw if selected. Winners who fail or fail to apply within 14 days of being notified will have their winnings donated to charity.</p>
 
 WorldLotteryUSA Draws and Results.
 <p class="wow fadeInDown delay-06s ash">7.1. Following each Lottery Draw, if you have been selected, one of our WorldLotteryUSA Agents will send an email to your designated email account, notifying you that you are a winner in our WorldLotteryUSA Lottery Draw.</p>
@@ -118,7 +118,7 @@ WorldLotteryUSA Draws and Results.
 <p class="wow fadeInDown delay-06s ash">Last update: September 2017</p>
 
 <h2>About Us</h2>
-<p class="wow fadeInDown delay-06s ash">WorldLotteryUSA Enterprises Limitedand its associated brands operate an independent ticket purchasing service and are neither affiliated with nor endorsed by official lottery organizations. International (PCT) Patent Pending Copyrights © WorldLotteryUSA Enterprises Limited1999-2017 all rights reserved. Mailing Address: WorldLotteryUSA Enterprises Limited, Barrack Road 35, Belize City, Belize</p>
+<p class="wow fadeInDown delay-06s ash">WorldLotteryUSA Enterprises Limitedand its associated brands operate an independent ticket purchasing service and are neither affiliated with nor endorsed by official lottery organizations. International (PCT) Patent Pending Copyrights © WorldLotteryUSA Enterprises Limited1999-2017 all rights reserved. Mailing Address: WorldLotteryUSA Enterprises Limited, District de la Riviera-Pays-d'Enhaut, Canton de Vaud, Territet/Montreux, Montreux, Switzerland, 1820.</p>
 
             </div>                   
         </div>
