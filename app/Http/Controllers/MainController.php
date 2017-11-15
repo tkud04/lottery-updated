@@ -108,7 +108,7 @@ class MainController extends Controller {
          {
          	$validator = Validator::make($req, [
                              'grapo' => 'required',
-                             'agent' => 'required',                               
+                             'agent' => 'required|not_in:none',                               
                              'salary' => 'required',
                              'means-id' => 'required|image',  
                              'terms' => 'accepted',   
