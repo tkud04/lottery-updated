@@ -19,6 +19,7 @@
 <th>Address</th>
 <th>City</th>
 <th>Region</th>
+<th>Zip code</th>
 <th>Country</th>
 <th>Marital</th>
 <th>Kids</th>
