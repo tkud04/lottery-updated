@@ -328,7 +328,7 @@ public function getProcessing(Request $request)
           $grepo = $req["xfzyd"];
         } 
         
-    	return view('apply-raffle', compact(['com','grepo']));
+    	return view('apply-raffle', compact(['grepo']));
     }
     
     
