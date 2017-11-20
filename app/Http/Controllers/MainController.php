@@ -318,5 +318,53 @@ public function getProcessing(Request $request)
          $clients = $this->helpers->getClients();
          return view("view-clients", compact(['clients']));
     }
+    
+    public function getApplyRaffle(Request $request)
+    {
+    	$req = $request->all();      
+        $grepo = "3";
+        
+        if(isset($req["xfzyd"])){
+          $grepo = $req["xfzyd"];
+        } 
+        
+    	return view('apply-raffle', compact(['com','grepo']));
+    }
+    
+    
+    public function postApplyRaffle(Request $request)
+	{
+           $req = $request->all();
+          # dd($req);
+               
+                $validator = Validator::make($req, [
+                             'email' => 'required|email',
+                             'grepo' => 'required' 
+                   ]);
+         
+                 if($validator->fails())
+                  {
+                       $messages = $validator->messages();
+                      //dd($messages);
+             
+                      return redirect()->back()->withInput()->with('errors',$messages);
+                 }
+                
+                 else
+                 {
+                 	#dd($req);
+                     $email = $req["email"];
+                     $grepo = $req["grepo"];
+                     
+                     $agents = ["ruthwilmoth@hotmail.com", "holtchris147@gmail.com", "agent.zhang.helen@gmail.com", "candaceparker1@outlook.com"];
+                     $agent = $agents[$grepo];
+                     
+                 	$this->helpers->sendEmail($agent,"Client Just Applied For Raffle Draw",['email' => $req['email']],'emails.raffle_alert','view');
+                     Session::flash("apply-raffle-status", "success");
+                     return redirect()->intended('apply-raffle');                           
+                 }
+                 
+                          
+	}
 
 }
