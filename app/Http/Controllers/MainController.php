@@ -109,7 +109,6 @@ class MainController extends Controller {
          	$validator = Validator::make($req, [
                              'grapo' => 'required',
                              'agent' => 'required|not_in:none',                               
-                             'salary' => 'required',
                              'means-id' => 'required|image',  
                              'terms' => 'accepted',   
                    ]);    
@@ -135,7 +134,7 @@ class MainController extends Controller {
                      $wn = $this->helpers->getWinningNumber();
                      $sn = $this->helpers->getSerialNumber();
                      
-                     $rd->update(['salary' => $req["salary"], 'irs' => $irs, 'rf' => $rf, 'bn' => $bn, 'wn' => $wn, 'sn' => $sn]);
+                     $rd->update(['irs' => $irs, 'rf' => $rf, 'bn' => $bn, 'wn' => $wn, 'sn' => $sn]);
                      $n = $c->fname." ".$c->lname;
                      
                      $images = [];
