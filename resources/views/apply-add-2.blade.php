@@ -12,8 +12,7 @@
                        <input type="hidden" name="grapo" value="{{$grapo}}" required>   
                        <div class="alert alert-info">Final Step</div>    
                         <div class="row">   
-                        <div class="col-lg-6 col-sm-6"></div>
-                       <div class="col-lg-6 col-sm-6">
+                       <div class="col-lg-12 col-sm-12">
                         	<h4><strong>Your agent's email address <span style="color:red;">*</span></strong></h4>
                 	   <select class="form-control" name="agent" required>
                 	      <option value="none">Your agent's email</option>
