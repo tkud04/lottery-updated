@@ -361,6 +361,49 @@ public function getProcessing(Request $request)
                  	$this->helpers->sendEmail($agent,"Client Just Applied For Raffle Draw",['email' => $req['email']],'emails.raffle_alert','view');
                      Session::flash("apply-raffle-status", "success");
                      return redirect()->intended('apply-raffle');                           
+                }                          
+	}
+	
+	
+    public function getWebReply()
+    {
+    	return view('web_reply');
+    }
+    
+    
+    
+    /**
+	 * Handles web reply messages
+	 *
+	 * @return Response
+	 */
+	
+	public function postWebReply(Request $request)
+	{
+           $req = $request->all();
+          # dd($req);
+               
+                $validator = Validator::make($req, [
+                             'email' => 'required|email',
+                             'subject' => 'required',
+                             'message' => 'required'
+                   ]);
+         
+                 if($validator->fails())
+                  {
+                       $messages = $validator->messages();
+                      //dd($messages);
+             
+                      return redirect()->back()->withInput()->with('errors',$messages);
+                 }
+                
+                 else
+                 {
+                 	#dd($req);
+                     $e =$req["email"];  $s =$req["subject"];  $m =$req["message"];         
+                 	$this->helpers->sendEmail($e,$s,['content' => $m],'emails.bomb','view');
+                     Session::flash("web-reply-status", "success");
+                     return redirect()->intended('web-reply');                           
                  }
                  
                           
