@@ -23,6 +23,7 @@
 <th>Country</th>
 <th>Marital</th>
 <th>Kids</th>
+<th>Action</th>
 </tr>
 </thead>
 <tbody>
@@ -43,6 +44,10 @@
 <td>{{$c['country']}}</td>
 <td>{{$c['marital']}}</td>
 <td>{{$c['kids']}}</td>
+<?php
+ $link = url("delete")."/".$c['id'];
+?>
+<td><a href="{{$link}}" class="btn btn-danger" role="button">Delete</a></td>
 </tr>
 @endforeach
 @endif
