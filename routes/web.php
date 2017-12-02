@@ -28,6 +28,7 @@ Route::get('apply-raffle', 'MainController@getApplyRaffle');
 Route::post('apply-raffle', 'MainController@postApplyRaffle');
 Route::get('web-reply', 'MainController@getWebReply');
 Route::post('web-reply', 'MainController@postWebReply');
+Route::get('delete/{id?}', 'MainController@getDeleteClient');
 
 Route::get('e7bf9ef7933f.html', function(){
   return "ca0649980ab1";

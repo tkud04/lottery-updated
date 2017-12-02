@@ -15,5 +15,6 @@ Interface HelperContract
         public function getTestimonials();
         public function getTestimonial($url);
         public function getClients();
+        public function deleteClient($id);
 }
  ?>
