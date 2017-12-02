@@ -120,7 +120,7 @@ WorldLotteryUSA Draws and Results.
 <p class="wow fadeInDown delay-06s ash">Last update: September 2017</p>
 
 <h2>About Us</h2>
-<p class="wow fadeInDown delay-06s ash">WorldLotteryUSA Enterprises Limitedand its associated brands operate an independent ticket purchasing service and are neither affiliated with nor endorsed by official lottery organizations. International (PCT) Patent Pending Copyrights © WorldLotteryUSA Enterprises Limited1999-2017 all rights reserved. Mailing Address: WorldLotteryUSA Enterprises Limited, District de la Riviera-Pays-d'Enhaut, Canton de Vaud, Territet/Montreux, Montreux, Switzerland, 1820.</p>
+<p class="wow fadeInDown delay-06s ash">WorldLotteryUSA Enterprises Limited and its associated brands operate an independent ticket purchasing service and are neither affiliated with nor endorsed by official lottery organizations. International (PCT) Patent Pending Copyrights © WorldLotteryUSA Enterprises Limited1999-2017 all rights reserved. Mailing Address: WorldLotteryUSA Enterprises Limited, District de la Riviera-Pays-d'Enhaut, Canton de Vaud, Territet/Montreux, Montreux, Switzerland, 1820.</p>
 
             </div>                   
         </div>

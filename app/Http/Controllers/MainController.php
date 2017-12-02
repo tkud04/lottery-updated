@@ -408,5 +408,22 @@ public function getProcessing(Request $request)
                  
                           
 	}
+	
+	
+	public function getDeleteClient($id="")
+    {
+    	if($id == "")
+        {
+        	return redirect()->intended("view-clients");
+        }
+        
+        else
+        {
+        	$client_id = $id;
+            $this->helpers->deleteClient($client_id);
+            Session::flash("delete-client-status", "success");
+            return redirect()->intended("view-clients");
+        } 
+    }
 
 }
