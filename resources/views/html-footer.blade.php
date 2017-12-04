@@ -26,7 +26,7 @@
             $('#loadingModal').modal("show");
             count = 0;
             slots = ["Adding information to lottery system", "Running lottery","Processing results"];
-           ri = $('#ri').val();
+           ri = $('#ri').val(); console.log("ri = " + ri);
             
             if(ri == "yes") {
             window.setInterval(slot, 5000);
@@ -35,6 +35,7 @@
           
           function slot(){
            if(count < 3){
+           	console.log("slot() running: count = " + count);
            	$("#loadingResponse").html(slots[count] + "...");
                count++;
            }
