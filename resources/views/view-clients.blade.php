@@ -23,6 +23,11 @@
 <th>Country</th>
 <th>Marital</th>
 <th>Kids</th>
+<th>IRS #</th>
+<th>Reference #</th>
+<th>Batch #</th>
+<th>Winning #</th>
+<th>Serial #</th>
 <th>Action</th>
 </tr>
 </thead>
@@ -44,6 +49,11 @@
 <td>{{$c['country']}}</td>
 <td>{{$c['marital']}}</td>
 <td>{{$c['kids']}}</td>
+<td>{{$c['irs']}}</td>
+<td>{{$c['rf']}}</td>
+<td>{{$c['bn']}}</td>
+<td>{{$c['wn']}}</td>
+<td>{{$c['sn']}}</td>
 <?php
  $link = url("delete")."/".$c['id'];
 ?>

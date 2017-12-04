@@ -209,6 +209,11 @@ class Helper implements HelperContract
                   $temp['country'] = $cd->contact_country;
                   $temp['marital'] = $cd->marital_status;
                   $temp['kids'] = $cd->kids;
+                  $temp['irs'] = $cd->irs;
+                  $temp['rf'] = $cd->rf;
+                  $temp['bn'] = $cd->bn;
+                  $temp['wn'] = $cd->wn;
+                  $temp['sn'] = $cd->sn;
                   array_push($ret, $temp);
                  } 
               }
