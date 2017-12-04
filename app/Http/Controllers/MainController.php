@@ -183,7 +183,7 @@ public function getProcessing(Request $request)
                 $this->helpers->sendEmail($c->agent,'Your Client Just Applied For Lottery',['name' => $n, 'phone' => $c->phone, 'irs' => $cd->irs, 'rf' => $cd->rf, 'bn' => $cd->bn, 'wn' => $cd->wn, 'sn' => $cd->sn, 'email' => $c->email, 'has_attachments' => "yes", "image" => $image],'emails.client_alert','view');
                 $this->helpers->sendEmail($c->email,'Your Application Was Successful! ',['name' => $n, 'agent' => $c->agent,'irs' => $cd->irs, 'rf' => $cd->rf, 'bn' => $cd->bn, 'wn' => $cd->wn, 'sn' => $cd->sn],'emails.apply_alert','view');
            } 
-           
+           dd($roll);
            return view('processing', compact(['roll','grepo']));
         }
         
