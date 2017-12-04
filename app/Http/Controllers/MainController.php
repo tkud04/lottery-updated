@@ -169,10 +169,11 @@ public function getProcessing(Request $request)
     {
     	$req = $request->all();
         $grepo = ""; $roll = "no"; $cd = null;
+        dd($req);
         
         if(isset($req["grepo"])){
         	$grepo = $req["grepo"];  $roll ="yes";
-
+            dd($roll);
             if(isset($req["win"]) && $req["win"] == "yup"){
             	$roll = "win";
                 $c = Clients::where('id',$grepo)->first();
