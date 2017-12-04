@@ -66,7 +66,8 @@
             $('#text-rot').html(rotatingTexts[c]);
             $('#text-rot').fadeIn();
          },3000);
-         return false;                 
+         return false;        
+      });       
 </script>
 
 
