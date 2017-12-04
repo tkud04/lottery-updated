@@ -4,7 +4,7 @@
 
 @section('content')
 @if($com == "1")
-@include("new-apply-add")
+@include("apply-add")
 @elseif($com == "2")
 @include("apply-add-2")
 @endif
