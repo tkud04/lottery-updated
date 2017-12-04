@@ -1,5 +1,7 @@
-@include("html-header")
-@include("nav")
+@extends('layout') 
+
+@section('title', "Processing..")
+
+@section('content')
 @include("processing-add")
-@include("footer")
-@include("html-footer")
+@stop 
