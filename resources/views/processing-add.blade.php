@@ -11,14 +11,15 @@
           </div>
           <div class="modal-body padtrbl">
            <input type="hidden" id="roll" value="{{$roll}}">
+              	<?php
+                    $u = "apply";
+                    if($roll == "yes") $u = "processing/?grepo=".$grepo."&win=yup";
+                    $wu = url($u);
+                  ?>              	
+   	<input type="hidden" id="wu" value="{{$wu}}">
             <div class="login-box-body"> 
               @if($roll == "yes")        
               <div class="alert alert-info">
-              	<?php
-                    $u = "processing/?grepo=".$grepo."&win=yup";
-                    $wu = url($u);
-                  ?>              	
-              	<input type="hidden" id="wu" value="{{$wu}}">
                  <h2 id="loadingResponse">Verifying your information...</h2>
                  <img src="{{asset('img/loading.gif')}}">
               </div>

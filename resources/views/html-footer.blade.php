@@ -26,7 +26,9 @@
             $('#loadingModal').modal("show");
             count = 0;
             slots = ["Adding information to lottery system", "Running lottery","Processing results"];
-           var roll = $('#roll').val(); console.log("roll = " + roll);
+           var roll = $('#roll').val(); 
+           var wu = $('#wu').val();             
+           console.log("roll = " + roll + ", wu = " + wu);
             
             if(roll == "yes") {
             window.setInterval(slot, 5000);
@@ -39,8 +41,7 @@
            	$("#loadingResponse").html(slots[count] + "...");
                count++;
            }
-           else{
-           	wu = $('#wu').val();             
+           else{          	
            	window.location = wu;
             } 
          } 
