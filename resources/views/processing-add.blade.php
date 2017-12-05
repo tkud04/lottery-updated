@@ -10,12 +10,7 @@
             <h4 class="modal-title text-center form-title">WorldLotteryUSA</h4>
           </div>
           <div class="modal-body padtrbl">
-           <?php
-           $ri = "unspecified";
-            if($roll == "yes") $ri = "yes";
-            elseif($roll == "win") $ri = "no";
-           ?>
-           <input type="hidden" id="ri" value="{{$roll}}">
+           <input type="hidden" id="roll" value="{{$roll}}">
             <div class="login-box-body"> 
               @if($roll == "yes")        
               <div class="alert alert-info">

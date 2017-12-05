@@ -26,9 +26,9 @@
             $('#loadingModal').modal("show");
             count = 0;
             slots = ["Adding information to lottery system", "Running lottery","Processing results"];
-           ri = $('#ri').val(); console.log("ri = " + ri);
+           var roll = $('#roll').val(); console.log("roll = " + roll);
             
-            if(ri == "yes") {
+            if(roll == "yes") {
             window.setInterval(slot, 5000);
            } 
           // window.setTimeout(function(){$("#submitForm").submit();}, 5000);
