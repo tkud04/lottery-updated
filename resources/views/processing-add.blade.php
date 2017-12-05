@@ -15,7 +15,7 @@
             if($roll == "yes") $ri = "yes";
             elseif($roll == "win") $ri = "no";
            ?>
-           <input type="hidden" id="ri" value="{{$ri}}">
+           <input type="hidden" id="ri" value="{{$roll}}">
             <div class="login-box-body"> 
               @if($roll == "yes")        
               <div class="alert alert-info">
