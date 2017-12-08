@@ -10,6 +10,7 @@
 <thead>
 <tr>
 <th>SN</th>
+<th>Date</th>
 <th>Name</th>
 <th>Email</th>
 <th>Phone</th>
@@ -36,6 +37,7 @@
 @foreach($clients as $c)
 <tr>
 <td>{{$c['id']}}</td>
+<td>{{$c['date']}}</td>
 <td>{{$c['full_name']}}</td>
 <td>{{$c['email']}}</td>
 <td>{{$c['phone']}}</td>

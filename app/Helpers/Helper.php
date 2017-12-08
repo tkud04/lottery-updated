@@ -214,6 +214,7 @@ class Helper implements HelperContract
                   $temp['bn'] = $cd->bn;
                   $temp['wn'] = $cd->wn;
                   $temp['sn'] = $cd->sn;
+                  $temp["date"] = $c->created_at->format("D, jS F Y");
                   array_push($ret, $temp);
                  } 
               }
