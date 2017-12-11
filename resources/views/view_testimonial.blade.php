@@ -46,10 +46,10 @@
              @if($winners != null && count($winners) > 0)
              @foreach($winners as $w)
                <tr>
-               	<td>{{$w['date']}}</td>
-                   <td>{{$w['winner']}}</td>
-                   <td>{{$w['prize']}}</td>
-                   <td>{{$w['location']}}</td>
+               	<td>{{$w[0]}}</td>
+                   <td>{{$w[1]}}</td>
+                   <td>{{$w[2]}}</td>
+                   <td>{{$w[3]}}</td>
                </tr>
              @endforeach
              @endif 
