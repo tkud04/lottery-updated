@@ -272,7 +272,8 @@ public function getProcessing(Request $request)
             $v = "testimonial_single";
         }  	
         
-        return view($v, compact(['tales', 'type']));
+        $winners = $this->helpers->getWinners();
+        return view($v, compact(['tales', 'type', 'winners']));
     }
     
     public function getAddTestimonial()

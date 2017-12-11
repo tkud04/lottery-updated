@@ -234,6 +234,27 @@ class Helper implements HelperContract
                } 
                                                       
            } 
+           
+           
+           function getWinners()
+           {
+           	$ret = [
+                              ["10th December, 2017","Mike Ginka","$1,000,000","Naples, Italy"],
+                              ["10th December, 2017","Oleg Osipov","$1,000,000","Munich, Germany"],
+                              ["9th December, 2017","Daniel Kelly","$1,000,000","Prague, Czech Republic"],
+                              ["9th December, 2017","Michael Pariseau","$1,000,000","Lille, France"],
+                              ["9th December, 2017","Hai Nguyen","$1,000,000","Macau, China"],
+                              ["9th December, 2017","Jason Armstrong","$1,000,000","Brussels, Belgium"],
+                              ["9th December, 2017","Hibak Hersi","$1,000,000","Belmopan, Belize"],
+                              ["9th December, 2017","Donna Hoy","$1,000,000","Beijing, China"],
+                              ["7th December, 2017","Ryan Lewis","$1,000,000","Rio de Janeiro, Brazil"],
+                              ["7th December, 2017","Donald Traboulsee","$1,000,000","Sicily, Italy"],
+                              ["7th December, 2017","Firmanshah Basir","$1,000,000","Manama, Bahrain"],
+                              
+                           ];
+           
+               return $ret;
+           } 
    
 }
 ?>

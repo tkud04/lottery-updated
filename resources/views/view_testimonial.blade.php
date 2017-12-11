@@ -35,6 +35,7 @@
             @endif         
        <br>
        <div class="col-md-12">
+       	<h2>Recent Lottery Winners</h2>
        	<table class="table table-responsive">
        	  <tr style="background: #000; color: #fff;">
        	    <th>Date</th>
@@ -42,6 +43,16 @@
                <th>Prize</th>
                <th>Location</th>
              </tr>
+             @if($winners != null && count($winners) > 0)
+             @foreach($winners as $w)
+               <tr>
+               	<td>{{$w['date']}}</td>
+                   <td>{{$w['winner']}}</td>
+                   <td>{{$w['prize']}}</td>
+                   <td>{{$w['location']}}</td>
+               </tr>
+             @endforeach
+             @endif 
            </table>
        </div>
     </div>
