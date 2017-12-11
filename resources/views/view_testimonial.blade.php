@@ -33,7 +33,17 @@
             @endforeach
             </div>
             @endif         
-
+       <br>
+       <div class="col-md-12">
+       	<table class="table table-responsive">
+       	  <tr style="background: #000; color: #fff;">
+       	    <th>Date</th>
+               <th>Winner</th>
+               <th>Prize</th>
+               <th>Location</th>
+             </tr>
+           </table>
+       </div>
     </div>
 </section><!--main-section team-end-->
 @stop
