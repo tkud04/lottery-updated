@@ -397,6 +397,8 @@
 					
 					<option value="OM">Oman</option>
 					
+					<option value="PK">Pakistan</option>
+					
 					<option value="PW">Palau</option>
 					
 					<option value="PS">Palestinian Territory</option>
@@ -875,6 +877,8 @@
 					<option value="NO">Norway</option>
 					
 					<option value="OM">Oman</option>
+					
+					<option value="PK">Pakistan</option>
 					
 					<option value="PW">Palau</option>
 					
@@ -1379,6 +1383,8 @@
 					<option value="NO">Norway</option>
 					
 					<option value="OM">Oman</option>
+					
+					<option value="PK">Pakistan</option>
 					
 					<option value="PW">Palau</option>
 					
