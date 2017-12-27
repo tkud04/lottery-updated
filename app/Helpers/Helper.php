@@ -9,6 +9,7 @@ use Auth;
 use App\Clients;
 use App\ClientData;
 use App\Testimonials;
+use Illuminate\Pagination\LengthAwarePaginator;
 
 class Helper implements HelperContract
 {
@@ -255,6 +256,30 @@ class Helper implements HelperContract
            
                return $ret;
            } 
+           
+           
+           /**
+     * Create a length aware custom paginator instance.
+     *
+     * @param  Array  $items
+     * @param  int  $perPage
+     * @return \Illuminate\Pagination\LengthAwarePaginator
+     */
+          function paginate($items, $perPage=15)
+          {
+          	$ret = null;
+          
+          	//Get current page form url e.g. &page=1
+             $currentPage = LengthAwarePaginator::resolveCurrentPage();
+             
+             //Slice the collection to get the items to display in current page
+            $currentPageItems = array_slice($items, ($currentPage - 1) * $perPage, $perPage);
+
+            //Create our paginator and pass it to the view
+            $ret = new LengthAwarePaginator($currentPageItems, count($items), $perPage);
+
+            return $ret;
+          }
    
 }
 ?>

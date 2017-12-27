@@ -316,8 +316,14 @@ public function getProcessing(Request $request)
     public function getClients()
     {
     	$clients = null;
-         $clients = $this->helpers->getClients();
-         return view("view-clients", compact(['clients']));
+        $rawClients = $this->helpers->getClients();
+        $c = count($rawClients);
+        $perPage = 15;
+        $totalPages = ($c%$perPage) + 1;
+         $clients = $this->helpers->paginate($rawClients);
+         #dd($clients);
+         $clients->setPath('view-clients');
+         return view("view-clients", compact(['clients','totalPages']));
     }
     
     public function getApplyRaffle(Request $request)

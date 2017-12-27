@@ -66,6 +66,12 @@
 </tbody>
 </table>
     </div>
+    
+   <div class="row">
+    <div class="col-md-12">
+    	{!! $clients->links('pagination',['totalPages' => $totalPages]) !!}
+    </div>
+  </div>
   </div>
 </div>
 
