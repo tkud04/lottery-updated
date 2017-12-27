@@ -189,7 +189,7 @@ class Helper implements HelperContract
           function getClients()
           {
           	$ret = [];
-          	$clients = Clients::all();
+          	$clients = Clients::orderBy('created_at', 'desc')->get();
           	 if($clients != null)
               {
               	foreach($clients as $c){
