@@ -418,6 +418,53 @@ public function getProcessing(Request $request)
 	}
 	
 	
+	public function getWebResponse()
+    {
+    	return view('web_response');
+    }
+    
+    
+    
+    /**
+	 * Handles web reply message responses
+	 *
+	 * @return Response
+	 */
+	
+	public function postWebResponse(Request $request)
+	{
+           $req = $request->all();
+          # dd($req);
+               
+                $validator = Validator::make($req, [
+                             'email' => 'required|email',
+                             'namr' => 'required',
+                             'subject' => 'required',
+                             'message' => 'required',
+                              'response' => 'required'
+                   ]);
+         
+                 if($validator->fails())
+                  {
+                       $messages = $validator->messages();
+                      //dd($messages);
+             
+                      return redirect()->back()->withInput()->with('errors',$messages);
+                 }
+                
+                 else
+                 {
+                 	#dd($req);
+                     $e =$req["email"]; $n =$req["name"];  $s ="Re: ".$req["subject"];  $m =$req["message"]; $r =$req["response"];                 
+                 	$this->helpers->sendEmail($e,$s,['email' => $e,'name' => $n,'subject' => $s,'message' => $m,'response' => $r],'emails.contact_reply','view');
+                     Session::flash("web-response-status", "success");
+                     return redirect()->intended('web-response');                           
+                 }
+                 
+                          
+	}
+	
+	
 	public function getDeleteClient($id="")
     {
     	if($id == "")
