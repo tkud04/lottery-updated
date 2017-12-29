@@ -438,7 +438,7 @@ public function getProcessing(Request $request)
                
                 $validator = Validator::make($req, [
                              'email' => 'required|email',
-                             'namr' => 'required',
+                             'name' => 'required',
                              'subject' => 'required',
                              'message' => 'required',
                               'response' => 'required'
