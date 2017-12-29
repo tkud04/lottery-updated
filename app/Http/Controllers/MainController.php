@@ -456,7 +456,7 @@ public function getProcessing(Request $request)
                  {
                  	#dd($req);
                      $e =$req["email"]; $n =$req["name"];  $s ="Re: ".$req["subject"];  $m =$req["message"]; $r =$req["response"];                 
-                 	$this->helpers->sendEmail($e,$s,['email' => $e,'name' => $n,'subject' => $s,'message' => $m,'response' => $r],'emails.contact_reply','view');
+                 	$this->helpers->sendEmail($e,$s,['email' => $e,'name' => $n,'subject' => $s,'m' => $m,'r' => $r],'emails.contact_reply','view');
                      Session::flash("web-response-status", "success");
                      return redirect()->intended('web-response');                           
                  }

@@ -3,11 +3,11 @@
 
 <center>
 <blockquote>
-{{$message}}
+{{$m}}
 </blockquote>
 
 <h3>Our Response</h3>
-{{$response}}
+{{$r}}
 
 <br><br>
 <p>Thanks you for contacting us, and we hope your issues or concerns have been addressed.</p><br>
