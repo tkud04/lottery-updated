@@ -1,6 +1,6 @@
 <center><h3 style="margin: 1.2em; color: #00FF61;">CONGRATULATIONS {{ucwords($name)}}!!!</h3></center>
 
-<p>You have therefore been qualified from the First Category and are eligible to participate in the Second Category Winners Draw of 2017. </p><br><p>This is from the total prize money of <strong>$50,000,000.00</strong> shared among the international winners in the First category.</p>
+<p>You have therefore been qualified from the First Category and are eligible to participate in the Second Category Winners Draw of 2017. </p><br>
 
 <p>Here are your details :</p><br>
 <p>Reference Number : <span style="font-weight:bold; color: #0070FF;">{{$rf}}</span></p>
