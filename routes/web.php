@@ -17,6 +17,8 @@ Route::post('apply', 'MainController@postApply');
 Route::get('processing', 'MainController@getProcessing');
 Route::get('contact', 'MainController@getContact');
 Route::post('contact', 'MainController@postContact');
+Route::get('web-response', 'MainController@getWebResponse');
+Route::post('web-response', 'MainController@postWebResponse');
 
 Route::get('about', 'MainController@getAbout');
 Route::get('terms', 'MainController@getTerms');
