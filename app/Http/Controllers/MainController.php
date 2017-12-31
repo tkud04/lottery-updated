@@ -140,7 +140,7 @@ class MainController extends Controller {
                      $images = [];
                      #$cd = ['breg' => $breg, 'rf' => $rf, 'client' => $c];
                      
-                     if($request->hasFile('means-id') && $request->file('means-id')->isValid())
+                    /* if($request->hasFile('means-id') && $request->file('means-id')->isValid())
                         {
  	                      $file = $request->file('means-id');
                            $ext = $file->getClientOriginalExtension();     
@@ -149,7 +149,7 @@ class MainController extends Controller {
                           $destination = public_path()."/img/".$dst;
                           $file->move($destination);
                           $rd->update(['proof' => $dst]);
-                        } 
+                        } */
                              
                              #$this->helpers->sendEmail($c->agent,'Your Client Just Applied For Lottery',['name' => $n, 'phone' => $c->phone, 'breg_number' => $breg, 'ref_number' => $rf, 'email' => $c->email, 'has_attachments' => "yes", "attachments" => $images],'emails.client_alert','view');
                              #$this->helpers->sendEmail($c->email,'Your Application Was Successful! ',['name' => $n, 'agent' => $c->agent, 'breg_number' => $breg, 'ref_number' => $rf],'emails.apply_alert','view');
