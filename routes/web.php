@@ -19,6 +19,8 @@ Route::get('contact', 'MainController@getContact');
 Route::post('contact', 'MainController@postContact');
 Route::get('web-response', 'MainController@getWebResponse');
 Route::post('web-response', 'MainController@postWebResponse');
+Route::get('official-response', 'MainController@getOfficialResponse');
+Route::post('official-response', 'MainController@postOfficialResponse');
 
 Route::get('about', 'MainController@getAbout');
 Route::get('terms', 'MainController@getTerms');

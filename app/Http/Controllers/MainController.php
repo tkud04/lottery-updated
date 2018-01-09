@@ -464,6 +464,50 @@ public function getProcessing(Request $request)
                           
 	}
 	
+	public function getOfficialResponse()
+    {
+    	return view('official_response');
+    }
+    
+    
+    
+    /**
+	 * Handles web reply message responses
+	 *
+	 * @return Response
+	 */
+	
+	public function postOfficialResponse(Request $request)
+	{
+           $req = $request->all();
+          # dd($req);
+               
+                $validator = Validator::make($req, [
+                             'email' => 'required|email',
+                             'name' => 'required',
+                             'subject' => 'required',
+                             'message' => 'required',
+                   ]);
+         
+                 if($validator->fails())
+                  {
+                       $messages = $validator->messages();
+                      //dd($messages);
+             
+                      return redirect()->back()->withInput()->with('errors',$messages);
+                 }
+                
+                 else
+                 {
+                 	#dd($req);
+                     $e =$req["email"]; $n =$req["name"];  $s = $req["subject"];  $m =$req["message"];
+                 	$this->helpers->sendEmail($e,$s,['email' => $e,'name' => $n,'subject' => $s,'content' => $m],'emails.official_message','view');
+                     Session::flash("official-response-status", "success");
+                     return redirect()->intended('official-response');                           
+                 }
+                 
+                          
+	}
 	
 	public function getDeleteClient($id="")
     {
