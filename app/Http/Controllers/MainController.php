@@ -466,7 +466,7 @@ public function getProcessing(Request $request)
 	
 	public function getOfficialResponse()
     {
-    	return view('official_response');
+    	return view('emails.official_response');
     }
     
     
