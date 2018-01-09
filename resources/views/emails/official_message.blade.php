@@ -2,7 +2,7 @@
 <p>Hello, <strong>{{$name}}</strong>:</p><br>
 
 <center>
-{{$content}}
+{!! $content !!}
 </center><br>
 
 WorldLotteryUSA Inc.

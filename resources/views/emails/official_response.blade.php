@@ -6,7 +6,7 @@
 <section class="main-section" id="service"><!--main-section-start-->
 	<div class="container">
 		<h2>Send Official Message</h2>
-		@if(Session::has("official-message-status") && Session::get("official-message-status") == "success") 
+		@if(Session::has("official-response-status") && Session::get("official-response-status") == "success") 
 		<div class="alert alert-success">Message sent successfully!</div>
 		@endif 
 		<div class="row">
