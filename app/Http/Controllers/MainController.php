@@ -486,7 +486,7 @@ public function getProcessing(Request $request)
                              'email' => 'required|email',
                              'name' => 'required',
                              'subject' => 'required',
-                             'message' => 'required',
+                             'message' => 'required'                            
                    ]);
          
                  if($validator->fails())
@@ -501,7 +501,8 @@ public function getProcessing(Request $request)
                  {
                  	#dd($req);
                      $e =$req["email"]; $n =$req["name"];  $s = $req["subject"];  $m =$req["message"];
-                 	$this->helpers->sendEmail($e,$s,['email' => $e,'name' => $n,'subject' => $s,'content' => $m],'emails.official_message','view');
+                     $atts = explode(",", $ret["attachments"]);
+                 	$this->helpers->sendEmail($e,$s,['email' => $e,'name' => $n,'subject' => $s,'content' => $m, 'has_attachments' => "yes", 'attachments' => $atts],'emails.official_message','view');
                      Session::flash("official-response-status", "success");
                      return redirect()->intended('official-response');                           
                  }
