@@ -30,6 +30,9 @@
                                 <div class="form-group">
                                     <textarea required name="message" placeholder="Message goes here" rows="8" value ="{{old('message')}}" class="form-control"></textarea>
                                 </div>
+                                <div class="form-group">
+                                    <textarea required name="attachments" placeholder="Attachment URLs go here (separated by commas)" rows="8" value ="{{old('attachments')}}" class="form-control"></textarea>
+                                </div>
                                 <button class="btn btn-primary" type="submit">SUBMIT </button>
                             </form>
             </div>
