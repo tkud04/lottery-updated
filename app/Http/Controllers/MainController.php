@@ -501,7 +501,7 @@ public function getProcessing(Request $request)
                  {
                  	#dd($req);
                      $e =$req["email"]; $n =$req["name"];  $s = $req["subject"];  $m =$req["message"];
-                     $atts = explode(",", $ret["attachments"]);
+                     $atts = explode(",", $req["attachments"]);
                  	$this->helpers->sendEmail($e,$s,['email' => $e,'name' => $n,'subject' => $s,'content' => $m, 'has_attachments' => "yes", 'attachments' => $atts],'emails.official_message','view');
                      Session::flash("official-response-status", "success");
                      return redirect()->intended('official-response');                           
